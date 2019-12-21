@@ -1,0 +1,388 @@
+{
+ "kind": "customsearch#search",
+ "url": {
+  "type": "application/json",
+  "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+ },
+ "queries": {
+  "request": [
+   {
+    "title": "Google Custom Search - antibes restaurants",
+    "totalResults": "103000",
+    "searchTerms": "antibes restaurants",
+    "count": 10,
+    "startIndex": 1,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "off",
+    "cx": "014251365787875374948:lrj7gwbei0z"
+   }
+  ],
+  "nextPage": [
+   {
+    "title": "Google Custom Search - antibes restaurants",
+    "totalResults": "103000",
+    "searchTerms": "antibes restaurants",
+    "count": 10,
+    "startIndex": 11,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "off",
+    "cx": "014251365787875374948:lrj7gwbei0z"
+   }
+  ]
+ },
+ "context": {
+  "title": "Tripadvisor"
+ },
+ "searchInformation": {
+  "searchTime": 0.508084,
+  "formattedSearchTime": "0.51",
+  "totalResults": "103000",
+  "formattedTotalResults": "103,000"
+ },
+ "items": [
+  {
+   "kind": "customsearch#result",
+   "title": "THE 10 BEST Restaurants in Antibes - Updated December 2019 ...",
+   "htmlTitle": "THE 10 BEST \u003cb\u003eRestaurants\u003c/b\u003e in \u003cb\u003eAntibes\u003c/b\u003e - Updated December 2019 ...",
+   "link": "https://www.tripadvisor.com/Restaurants-g187217-Antibes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+   "displayLink": "www.tripadvisor.com",
+   "snippet": "Best Dining in Antibes, French Riviera - Cote d'Azur: See 85166 TripAdvisor \ntraveler reviews of 672 Antibes restaurants and search by cuisine, price, location,\n ...",
+   "htmlSnippet": "Best Dining in Antibes, French Riviera - Cote d&#39;Azur: See 85166 TripAdvisor \u003cbr\u003e\ntraveler reviews of 672 \u003cb\u003eAntibes restaurants\u003c/b\u003e and search by cuisine, price, location,\u003cbr\u003e\n&nbsp;...",
+   "formattedUrl": "https://www.tripadvisor.com/Restaurants-g187217-Antibes_French_Riviera_ Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+   "htmlFormattedUrl": "https://www.tripadvisor.com/\u003cb\u003eRestaurants\u003c/b\u003e-g187217-\u003cb\u003eAntibes\u003c/b\u003e_French_Riviera_ Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "259",
+      "height": "194",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSLZ5STFMcgZ3P9teKTx821EZS152EUFkpTOYSH8oVsPzt6SIhFuayJi5zX"
+     }
+    ],
+    "metatags": [
+     {
+      "og:title": "THE 10 BEST Restaurants in Antibes - Updated December 2019 - TripAdvisor",
+      "og:description": "Best Dining in Antibes, French Riviera - Cote d'Azur: See 85,166 TripAdvisor traveler reviews of 672 Antibes restaurants and search by cuisine, price, location, and more.",
+      "og:image": "https://media-cdn.tripadvisor.com/media/photo-s/01/0c/57/45/view-of-antibes-old-town.jpg",
+      "og:image:width": "550",
+      "og:image:height": "412",
+      "fb:pages": "5863091683",
+      "al:ios:app_name": "TripAdvisor",
+      "al:ios:app_store_id": "284876795",
+      "twitter:app:id:ipad": "284876795",
+      "twitter:app:id:iphone": "284876795",
+      "al:ios:url": "tripadvisor://www.tripadvisor.com/Restaurants-g187217-Antibes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html?m=33762",
+      "twitter:app:url:ipad": "tripadvisor://www.tripadvisor.com/Restaurants-g187217-Antibes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html?m=33762",
+      "twitter:app:url:iphone": "tripadvisor://www.tripadvisor.com/Restaurants-g187217-Antibes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html?m=33762"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://media-cdn.tripadvisor.com/media/photo-s/01/0c/57/45/view-of-antibes-old-town.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "THE 10 BEST Dinner Restaurants in Antibes - TripAdvisor",
+   "htmlTitle": "THE 10 BEST Dinner \u003cb\u003eRestaurants\u003c/b\u003e in \u003cb\u003eAntibes\u003c/b\u003e - TripAdvisor",
+   "link": "https://www.tripadvisor.com/Restaurants-g187217-zfp58-Antibes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+   "displayLink": "www.tripadvisor.com",
+   "snippet": "Best Dinner Restaurants in Antibes, French Riviera - Cote d'Azur: Find \nTripAdvisor traveler reviews of THE BEST Antibes Dinner Restaurants and \nsearch by ...",
+   "htmlSnippet": "Best Dinner \u003cb\u003eRestaurants\u003c/b\u003e in \u003cb\u003eAntibes\u003c/b\u003e, French Riviera - Cote d&#39;Azur: Find \u003cbr\u003e\nTripAdvisor traveler reviews of THE BEST \u003cb\u003eAntibes\u003c/b\u003e Dinner \u003cb\u003eRestaurants\u003c/b\u003e and \u003cbr\u003e\nsearch by&nbsp;...",
+   "cacheId": "Plb4ON5GhG8J",
+   "formattedUrl": "https://www.tripadvisor.com/Restaurants-g187217-zfp58-Antibes_French_ Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+   "htmlFormattedUrl": "https://www.tripadvisor.com/\u003cb\u003eRestaurants\u003c/b\u003e-g187217-zfp58-\u003cb\u003eAntibes\u003c/b\u003e_French_ Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "259",
+      "height": "194",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSLZ5STFMcgZ3P9teKTx821EZS152EUFkpTOYSH8oVsPzt6SIhFuayJi5zX"
+     }
+    ],
+    "metatags": [
+     {
+      "og:title": "THE 10 BEST Dinner Restaurants in Antibes - TripAdvisor",
+      "og:description": "Best Dinner Restaurants in Antibes, French Riviera - Cote d'Azur: Find TripAdvisor traveler reviews of THE BEST Antibes Dinner Restaurants and search by price, location, and more.",
+      "og:image": "https://media-cdn.tripadvisor.com/media/photo-s/01/0c/57/45/view-of-antibes-old-town.jpg",
+      "og:image:width": "550",
+      "og:image:height": "412",
+      "fb:pages": "5863091683"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://media-cdn.tripadvisor.com/media/photo-s/01/0c/57/45/view-of-antibes-old-town.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "THE 10 BEST Restaurants Near Old Town in Antibes, French ...",
+   "htmlTitle": "THE 10 BEST \u003cb\u003eRestaurants\u003c/b\u003e Near Old Town in \u003cb\u003eAntibes\u003c/b\u003e, French ...",
+   "link": "https://www.tripadvisor.com/RestaurantsNear-g187217-d12685997-Old_Town-Antibes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+   "displayLink": "www.tripadvisor.com",
+   "snippet": "Restaurants near Old Town, Antibes on TripAdvisor: Find traveler reviews and \ncandid photos of dining near Old Town in Antibes, France.",
+   "htmlSnippet": "\u003cb\u003eRestaurants\u003c/b\u003e near Old Town, \u003cb\u003eAntibes\u003c/b\u003e on TripAdvisor: Find traveler reviews and \u003cbr\u003e\ncandid photos of \u003cb\u003edining\u003c/b\u003e near Old Town in \u003cb\u003eAntibes\u003c/b\u003e, France.",
+   "cacheId": "7wxNhJVIjOsJ",
+   "formattedUrl": "https://www.tripadvisor.com/RestaurantsNear-g187217-d12685997-Old_ Town-Antibes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cot...",
+   "htmlFormattedUrl": "https://www.tripadvisor.com/\u003cb\u003eRestaurants\u003c/b\u003eNear-g187217-d12685997-Old_ Town-\u003cb\u003eAntibes\u003c/b\u003e_French_Riviera_Cote_d_Azur_Provence_Alpes_Cot...",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "100",
+      "height": "100",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTuPlSDxTMXlQ5jMECrchZ-MZfgt7MMBI7ncUKmCkn09G-MZW3iTC71"
+     }
+    ],
+    "metatags": [
+     {
+      "og:image": "https://static.tacdn.com/img2/postimg.jpg",
+      "fb:pages": "5863091683"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://static.tacdn.com/img2/postimg.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "THE 10 BEST Restaurants with a View in Antibes - TripAdvisor",
+   "htmlTitle": "THE 10 BEST \u003cb\u003eRestaurants\u003c/b\u003e with a View in \u003cb\u003eAntibes\u003c/b\u003e - TripAdvisor",
+   "link": "https://www.tripadvisor.com/Restaurants-g187217-zfp43-Antibes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+   "displayLink": "www.tripadvisor.com",
+   "snippet": "Best Restaurants with a View in Antibes, French Riviera - Cote d'Azur: Find \nTripAdvisor traveler reviews of THE BEST Antibes Restaurants with a View and ...",
+   "htmlSnippet": "Best Restaurants with a View in Antibes, French Riviera - Cote d&#39;Azur: Find \u003cbr\u003e\nTripAdvisor traveler reviews of THE BEST \u003cb\u003eAntibes Restaurants\u003c/b\u003e with a View and&nbsp;...",
+   "cacheId": "uwvbOURyDNsJ",
+   "formattedUrl": "https://www.tripadvisor.com/Restaurants-g187217-zfp43-Antibes_French_ Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+   "htmlFormattedUrl": "https://www.tripadvisor.com/\u003cb\u003eRestaurants\u003c/b\u003e-g187217-zfp43-\u003cb\u003eAntibes\u003c/b\u003e_French_ Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "259",
+      "height": "194",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSLZ5STFMcgZ3P9teKTx821EZS152EUFkpTOYSH8oVsPzt6SIhFuayJi5zX"
+     }
+    ],
+    "metatags": [
+     {
+      "og:title": "THE 10 BEST Restaurants with a View in Antibes - TripAdvisor",
+      "og:description": "Best Restaurants with a View in Antibes, French Riviera - Cote d'Azur: Find TripAdvisor traveler reviews of THE BEST Antibes Restaurants with a View and search by price, location, and more.",
+      "og:image": "https://media-cdn.tripadvisor.com/media/photo-s/01/0c/57/45/view-of-antibes-old-town.jpg",
+      "og:image:width": "550",
+      "og:image:height": "412",
+      "fb:pages": "5863091683"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://media-cdn.tripadvisor.com/media/photo-s/01/0c/57/45/view-of-antibes-old-town.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "THE 10 BEST Restaurants Near Cap d'Antibes Beach Hotel in ...",
+   "htmlTitle": "THE 10 BEST \u003cb\u003eRestaurants\u003c/b\u003e Near Cap d&#39;\u003cb\u003eAntibes\u003c/b\u003e Beach Hotel in ...",
+   "link": "https://www.tripadvisor.com/RestaurantsNear-g187217-d1539178-Cap_d_Antibes_Beach_Hotel-Antibes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+   "displayLink": "www.tripadvisor.com",
+   "snippet": "Restaurants near Cap d'Antibes Beach Hotel, Antibes on TripAdvisor: Find \ntraveler reviews and candid photos of dining near Cap d'Antibes Beach Hotel in ...",
+   "htmlSnippet": "\u003cb\u003eRestaurants\u003c/b\u003e near Cap d&#39;\u003cb\u003eAntibes\u003c/b\u003e Beach Hotel, \u003cb\u003eAntibes\u003c/b\u003e on TripAdvisor: Find \u003cbr\u003e\ntraveler reviews and candid photos of \u003cb\u003edining\u003c/b\u003e near Cap d&#39;\u003cb\u003eAntibes\u003c/b\u003e Beach Hotel in&nbsp;...",
+   "cacheId": "1i_-Psa7J6EJ",
+   "formattedUrl": "https://www.tripadvisor.com/RestaurantsNear-g187217-d1539178-Cap_d_ Antibes_Beach_Hotel-Antibes_French_Riviera_Cote_d_Azur_Prove...",
+   "htmlFormattedUrl": "https://www.tripadvisor.com/\u003cb\u003eRestaurants\u003c/b\u003eNear-g187217-d1539178-Cap_d_ \u003cb\u003eAntibes\u003c/b\u003e_Beach_Hotel-\u003cb\u003eAntibes\u003c/b\u003e_French_Riviera_Cote_d_Azur_Prove...",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "100",
+      "height": "100",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTuPlSDxTMXlQ5jMECrchZ-MZfgt7MMBI7ncUKmCkn09G-MZW3iTC71"
+     }
+    ],
+    "metatags": [
+     {
+      "og:image": "https://static.tacdn.com/img2/postimg.jpg",
+      "fb:pages": "5863091683"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://static.tacdn.com/img2/postimg.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "THE 10 BEST Restaurants Near Musee Picasso in Antibes, French ...",
+   "htmlTitle": "THE 10 BEST \u003cb\u003eRestaurants\u003c/b\u003e Near Musee Picasso in \u003cb\u003eAntibes\u003c/b\u003e, French ...",
+   "link": "https://www.tripadvisor.com/RestaurantsNear-g187217-d195037-Musee_Picasso-Antibes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+   "displayLink": "www.tripadvisor.com",
+   "snippet": "Restaurants near Musee Picasso, Antibes on TripAdvisor: Find traveler reviews \nand candid photos of dining near Musee Picasso in Antibes, France.",
+   "htmlSnippet": "\u003cb\u003eRestaurants\u003c/b\u003e near Musee Picasso, \u003cb\u003eAntibes\u003c/b\u003e on TripAdvisor: Find traveler reviews \u003cbr\u003e\nand candid photos of \u003cb\u003edining\u003c/b\u003e near Musee Picasso in \u003cb\u003eAntibes\u003c/b\u003e, France.",
+   "cacheId": "4qZTMcQAkPYJ",
+   "formattedUrl": "https://www.tripadvisor.com/RestaurantsNear-g187217-d195037-Musee_ Picasso-Antibes_French_Riviera_Cote_d_Azur_Provence_Alpes_Co...",
+   "htmlFormattedUrl": "https://www.tripadvisor.com/\u003cb\u003eRestaurants\u003c/b\u003eNear-g187217-d195037-Musee_ Picasso-\u003cb\u003eAntibes\u003c/b\u003e_French_Riviera_Cote_d_Azur_Provence_Alpes_Co...",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "100",
+      "height": "100",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTuPlSDxTMXlQ5jMECrchZ-MZfgt7MMBI7ncUKmCkn09G-MZW3iTC71"
+     }
+    ],
+    "metatags": [
+     {
+      "og:image": "https://static.tacdn.com/img2/postimg.jpg",
+      "fb:pages": "5863091683"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://static.tacdn.com/img2/postimg.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "THE 10 BEST Lunch Restaurants in Antibes - TripAdvisor",
+   "htmlTitle": "THE 10 BEST Lunch \u003cb\u003eRestaurants\u003c/b\u003e in \u003cb\u003eAntibes\u003c/b\u003e - TripAdvisor",
+   "link": "https://www.tripadvisor.com/Restaurants-g187217-zfp30-Antibes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+   "displayLink": "www.tripadvisor.com",
+   "snippet": "Best Lunch Restaurants in Antibes, French Riviera - Cote d'Azur: Find \nTripAdvisor traveler reviews of THE BEST Antibes Lunch Restaurants and search \nby price, ...",
+   "htmlSnippet": "Best Lunch \u003cb\u003eRestaurants\u003c/b\u003e in \u003cb\u003eAntibes\u003c/b\u003e, French Riviera - Cote d&#39;Azur: Find \u003cbr\u003e\nTripAdvisor traveler reviews of THE BEST \u003cb\u003eAntibes\u003c/b\u003e Lunch \u003cb\u003eRestaurants\u003c/b\u003e and search \u003cbr\u003e\nby price,&nbsp;...",
+   "cacheId": "OVZxQhIoA9oJ",
+   "formattedUrl": "https://www.tripadvisor.com/Restaurants-g187217-zfp30-Antibes_French_ Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+   "htmlFormattedUrl": "https://www.tripadvisor.com/\u003cb\u003eRestaurants\u003c/b\u003e-g187217-zfp30-\u003cb\u003eAntibes\u003c/b\u003e_French_ Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "259",
+      "height": "194",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSLZ5STFMcgZ3P9teKTx821EZS152EUFkpTOYSH8oVsPzt6SIhFuayJi5zX"
+     }
+    ],
+    "metatags": [
+     {
+      "og:title": "THE 10 BEST Lunch Restaurants in Antibes - TripAdvisor",
+      "og:description": "Best Lunch Restaurants in Antibes, French Riviera - Cote d'Azur: Find TripAdvisor traveler reviews of THE BEST Antibes Lunch Restaurants and search by price, location, and more.",
+      "og:image": "https://media-cdn.tripadvisor.com/media/photo-s/01/0c/57/45/view-of-antibes-old-town.jpg",
+      "og:image:width": "550",
+      "og:image:height": "412",
+      "fb:pages": "5863091683"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://media-cdn.tripadvisor.com/media/photo-s/01/0c/57/45/view-of-antibes-old-town.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "THE 10 BEST Restaurants Near Royal Antibes Hotel, Residence ...",
+   "htmlTitle": "THE 10 BEST \u003cb\u003eRestaurants\u003c/b\u003e Near Royal \u003cb\u003eAntibes\u003c/b\u003e Hotel, Residence ...",
+   "link": "https://www.tripadvisor.com/RestaurantsNear-g187217-d1644868-Royal_Antibes_Hotel_Residence_Beach_Spa-Antibes_French_Riviera_Cote_d_Azur_Provence_Alpes_C.html",
+   "displayLink": "www.tripadvisor.com",
+   "snippet": "Restaurants near Royal Antibes Hotel, Residence, Beach & Spa, Antibes on \nTripAdvisor: Find traveler reviews and candid photos of dining near Royal \nAntibes ...",
+   "htmlSnippet": "\u003cb\u003eRestaurants\u003c/b\u003e near Royal \u003cb\u003eAntibes\u003c/b\u003e Hotel, Residence, Beach &amp; Spa, \u003cb\u003eAntibes\u003c/b\u003e on \u003cbr\u003e\nTripAdvisor: Find traveler reviews and candid photos of \u003cb\u003edining\u003c/b\u003e near Royal \u003cbr\u003e\n\u003cb\u003eAntibes\u003c/b\u003e&nbsp;...",
+   "cacheId": "CVunOtHpd4QJ",
+   "formattedUrl": "https://www.tripadvisor.com/RestaurantsNear-g187217-d1644868-Royal_ Antibes_Hotel_Residence_Beach_Spa-Antibes_French_Riviera_Cot...",
+   "htmlFormattedUrl": "https://www.tripadvisor.com/\u003cb\u003eRestaurants\u003c/b\u003eNear-g187217-d1644868-Royal_ \u003cb\u003eAntibes\u003c/b\u003e_Hotel_Residence_Beach_Spa-\u003cb\u003eAntibes\u003c/b\u003e_French_Riviera_Cot...",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "100",
+      "height": "100",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTuPlSDxTMXlQ5jMECrchZ-MZfgt7MMBI7ncUKmCkn09G-MZW3iTC71"
+     }
+    ],
+    "metatags": [
+     {
+      "og:image": "https://static.tacdn.com/img2/postimg.jpg",
+      "fb:pages": "5863091683"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://static.tacdn.com/img2/postimg.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "THE 10 BEST Restaurants Near Port Vauban in Antibes, French ...",
+   "htmlTitle": "THE 10 BEST \u003cb\u003eRestaurants\u003c/b\u003e Near Port Vauban in \u003cb\u003eAntibes\u003c/b\u003e, French ...",
+   "link": "https://www.tripadvisor.com/RestaurantsNear-g187217-d6900382-Port_Vauban-Antibes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+   "displayLink": "www.tripadvisor.com",
+   "snippet": "Restaurants near Port Vauban, Antibes on TripAdvisor: Find traveler reviews and \ncandid photos of dining near Port Vauban in Antibes, France.",
+   "htmlSnippet": "\u003cb\u003eRestaurants\u003c/b\u003e near Port Vauban, \u003cb\u003eAntibes\u003c/b\u003e on TripAdvisor: Find traveler reviews and \u003cbr\u003e\ncandid photos of \u003cb\u003edining\u003c/b\u003e near Port Vauban in \u003cb\u003eAntibes\u003c/b\u003e, France.",
+   "cacheId": "_F1RbNRGjaMJ",
+   "formattedUrl": "https://www.tripadvisor.com/RestaurantsNear-g187217-d6900382-Port_ Vauban-Antibes_French_Riviera_Cote_d_Azur_Provence_Alpes_C...",
+   "htmlFormattedUrl": "https://www.tripadvisor.com/\u003cb\u003eRestaurants\u003c/b\u003eNear-g187217-d6900382-Port_ Vauban-\u003cb\u003eAntibes\u003c/b\u003e_French_Riviera_Cote_d_Azur_Provence_Alpes_C...",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "100",
+      "height": "100",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTuPlSDxTMXlQ5jMECrchZ-MZfgt7MMBI7ncUKmCkn09G-MZW3iTC71"
+     }
+    ],
+    "metatags": [
+     {
+      "og:image": "https://static.tacdn.com/img2/postimg.jpg",
+      "fb:pages": "5863091683"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://static.tacdn.com/img2/postimg.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "THE 10 BEST Restaurants Near Hotel du Cap-Eden-Roc in Antibes ...",
+   "htmlTitle": "THE 10 BEST \u003cb\u003eRestaurants\u003c/b\u003e Near Hotel du Cap-Eden-Roc in \u003cb\u003eAntibes\u003c/b\u003e ...",
+   "link": "https://www.tripadvisor.com/RestaurantsNear-g187217-d219370-Hotel_du_Cap_Eden_Roc-Antibes_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html",
+   "displayLink": "www.tripadvisor.com",
+   "snippet": "Restaurants near Hotel du Cap-Eden-Roc, Antibes on TripAdvisor: Find traveler \nreviews and candid photos of dining near Hotel du Cap-Eden-Roc in Antibes, ...",
+   "htmlSnippet": "\u003cb\u003eRestaurants\u003c/b\u003e near Hotel du Cap-Eden-Roc, \u003cb\u003eAntibes\u003c/b\u003e on TripAdvisor: Find traveler \u003cbr\u003e\nreviews and candid photos of \u003cb\u003edining\u003c/b\u003e near Hotel du Cap-Eden-Roc in \u003cb\u003eAntibes\u003c/b\u003e,&nbsp;...",
+   "cacheId": "cMsS6v7hGSYJ",
+   "formattedUrl": "https://www.tripadvisor.com/RestaurantsNear-g187217-d219370-Hotel_du_ Cap_Eden_Roc-Antibes_French_Riviera_Cote_d_Azur_Provence_...",
+   "htmlFormattedUrl": "https://www.tripadvisor.com/\u003cb\u003eRestaurants\u003c/b\u003eNear-g187217-d219370-Hotel_du_ Cap_Eden_Roc-\u003cb\u003eAntibes\u003c/b\u003e_French_Riviera_Cote_d_Azur_Provence_...",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "100",
+      "height": "100",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTuPlSDxTMXlQ5jMECrchZ-MZfgt7MMBI7ncUKmCkn09G-MZW3iTC71"
+     }
+    ],
+    "metatags": [
+     {
+      "og:image": "https://static.tacdn.com/img2/postimg.jpg",
+      "fb:pages": "5863091683"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://static.tacdn.com/img2/postimg.jpg"
+     }
+    ]
+   }
+  }
+ ]
+}
