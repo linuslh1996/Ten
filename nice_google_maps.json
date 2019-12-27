@@ -1,0 +1,1000 @@
+{
+    "html_attributions": [],
+    "next_page_token": "CpQCAgEAAL5RC-qB10kp14PViGTN8jYJNNHyGf_7NsKlcwDmMmdW-X6IQMrNN3tj9bhYqvoMhBFIILOy51ZRuDbXjrnqAwVPbw1-ZX8FjDsbme_wrCSYRJqvmUImFRTOmrTiiCw9UuK4JTj2kjMR43D16f_xi28VIX-_pB9jpH451u9apBsAvGdxDpmbGXNPleE2U3xJsZ5NfF2dK_KCuWBVv8pIDLerxM4EcZzZjrVtrD9jyyKHKLzhrD_NinLfklwq5i2EJvzoqmREsBw3deao0SqF4sa6K_bv8l6XcnttuQhZQ5m6ikfO1gf6ZUGf1qZCAFuC0fW7VLZSTAvyACC1DbhAhzoBTmmTtSzAkHJZOe8mVDSMEhBVM7Usgf3ZAac919pj7s96GhR3FSN9quFlt5ddb0Wum__XEZM5Jg",
+    "results": [
+        {
+            "formatted_address": "26 Quai Lunel, 06300 Nice, France",
+            "geometry": {
+                "location": {
+                    "lat": 43.695034,
+                    "lng": 7.282952
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.69637392989272,
+                        "lng": 7.284354679892721
+                    },
+                    "southwest": {
+                        "lat": 43.69367427010728,
+                        "lng": 7.281655020107277
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "ec426ca5ebfecf3792c451d60ae9ca1763c73cd3",
+            "name": "Daki Daïa",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 1365,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/105371340414852750421\">Aurélie Mushimucha</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAQU23Ge8zFRvPPsGWRWWRcBDq8Fmvq8j5VT9MlPOFKgUl7k_v4chzZNLHyomBM1fgv8sld5vUf3UsySukTUzzek7XTCbZpmf1gBDEybU4sTd4qUYgNiZ1kbdlDHmByawFEhCN2MYZeLtbhBlL_V1Lra_AGhToY-aqkwKb6fktaNZrPwp0-noo0w",
+                    "width": 2048
+                }
+            ],
+            "place_id": "ChIJN0KjX77azRIR4SzoTpkHiSE",
+            "plus_code": {
+                "compound_code": "M7WM+25 Nice, France",
+                "global_code": "8FM9M7WM+25"
+            },
+            "price_level": 2,
+            "rating": 4.8,
+            "reference": "ChIJN0KjX77azRIR4SzoTpkHiSE",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 150
+        },
+        {
+            "formatted_address": "12 Rue Lascaris, 06300 Nice, France",
+            "geometry": {
+                "location": {
+                    "lat": 43.6997761,
+                    "lng": 7.284809999999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.70119362989272,
+                        "lng": 7.286171379892721
+                    },
+                    "southwest": {
+                        "lat": 43.69849397010727,
+                        "lng": 7.283471720107277
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "8088c3267fba9a468ae899362aacb59d809ddeb1",
+            "name": "Jan",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 2988,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/102791210248651917596\">Preethi Pirlamarla</a>"
+                    ],
+                    "photo_reference": "CmRaAAAALChkx0LQnEwo-ah0k27ws1NFciQPUXXF6TdOlBwTRqOAofWUPkh2s7VdxzrGnzyyCbo-VwyKYQUCDmUhZzshRoJnrwOXZ97mPDwMD4IRVh9fQGkZttlsKKUdme957MVuEhD51oesep-LtNfxYnX3B-Q3GhTimPwhkQSITKKpOuSjOv-K3eOpyQ",
+                    "width": 5312
+                }
+            ],
+            "place_id": "ChIJ7cguWLjazRIR0sVOtnZhvUM",
+            "plus_code": {
+                "compound_code": "M7XM+WW Nice, France",
+                "global_code": "8FM9M7XM+WW"
+            },
+            "rating": 4.8,
+            "reference": "ChIJ7cguWLjazRIR0sVOtnZhvUM",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 336
+        },
+        {
+            "formatted_address": "8 Bis Rue du Collet, 06300 Nice, France",
+            "geometry": {
+                "location": {
+                    "lat": 43.6981468,
+                    "lng": 7.277077599999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.69951522989272,
+                        "lng": 7.278327429892721
+                    },
+                    "southwest": {
+                        "lat": 43.69681557010728,
+                        "lng": 7.275627770107278
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "47da3b9b118a04f1894900c3e924d3a4c44830f0",
+            "name": "Oliviera",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 1434,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/114247032184063224295\">Mike Hiwaymann</a>"
+                    ],
+                    "photo_reference": "CmRaAAAATSbXtWc1zOxxsMZuddNZDEX1nWUgpP98LuGplMRO2pwPOtOQC_lYZLBsrHjzuknJ7UtkiTwrsBUY4nCoUaOcF39Xx9NlVG9IcbTV1sgZ3z4mZv0AMWjoNfAVAQODVyRBEhC52pH-wLswHjpuPD-UKrUfGhQ24KkLjbdRTJ1P7rlJU5zjvVlSvg",
+                    "width": 1076
+                }
+            ],
+            "place_id": "ChIJDQlFsrzazRIRLd1BJ-lVtYA",
+            "plus_code": {
+                "compound_code": "M7XG+7R Nice, France",
+                "global_code": "8FM9M7XG+7R"
+            },
+            "price_level": 2,
+            "rating": 4.7,
+            "reference": "ChIJDQlFsrzazRIRLd1BJ-lVtYA",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 270
+        },
+        {
+            "formatted_address": "11 Rue Delille, 06000 Nice, France",
+            "geometry": {
+                "location": {
+                    "lat": 43.7016765,
+                    "lng": 7.2756915
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.70305402989272,
+                        "lng": 7.27706022989272
+                    },
+                    "southwest": {
+                        "lat": 43.70035437010727,
+                        "lng": 7.274360570107277
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "910f1615b035b7ed0c0bded3066f87e6e34a3114",
+            "name": "L'Eau de vie",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 4032,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/106839078664583111598\">Ling Cai</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAC6x99_Y9HfCfVBZQyZ6jFU1XgpNIhk3-4MrZ2fevnC0V01xT-FIFsrowSNORwTyFhrG7w3jM8AOKi3wGzW7PTBsqBuv7glIthPEbixtfDfO53q_uspX6UINAgJ56glwNEhD6oLNbPE4OrQlegLpdhT1RGhR2ebXQgOf0dnFO7wSruyESAGjZAg",
+                    "width": 3024
+                }
+            ],
+            "place_id": "ChIJ8V2bSaXazRIRQW52wdexwdY",
+            "plus_code": {
+                "compound_code": "P72G+M7 Nice, France",
+                "global_code": "8FM9P72G+M7"
+            },
+            "rating": 4.7,
+            "reference": "ChIJ8V2bSaXazRIRQW52wdexwdY",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 149
+        },
+        {
+            "formatted_address": "37 Rue Pastorelli, 06000 Nice, France",
+            "geometry": {
+                "location": {
+                    "lat": 43.7002637,
+                    "lng": 7.270215800000001
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.70167262989272,
+                        "lng": 7.271529979892722
+                    },
+                    "southwest": {
+                        "lat": 43.69897297010727,
+                        "lng": 7.268830320107278
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "533d28ba0f40806a75078b35e43017bd9d7ff57e",
+            "name": "Les Sens",
+            "opening_hours": {},
+            "photos": [
+                {
+                    "height": 1920,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/116224790287691133746\">Karine Lopes Martins</a>"
+                    ],
+                    "photo_reference": "CmRaAAAA45SYOnx_Nuqg37QMp71wHPkRe2qzIfdmhY34dZxZQxJH6R9I5U8wtzXVLNeT6acsnzTAyQ1WkHHEFQXyjFQDBVAAs_E01YftIC7rCa3geMRpbmKu30s5DaRxVc1eX5TtEhBSH1gQUaEj7qcna4rs2BdzGhSNkRSMseAny3kahuWIwi4LiAUCNg",
+                    "width": 1080
+                }
+            ],
+            "place_id": "ChIJMZ2thqbazRIRSrPmgZskndo",
+            "plus_code": {
+                "compound_code": "P72C+43 Nice, France",
+                "global_code": "8FM9P72C+43"
+            },
+            "price_level": 2,
+            "rating": 4.6,
+            "reference": "ChIJMZ2thqbazRIRSrPmgZskndo",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 492
+        },
+        {
+            "formatted_address": "23 Rue Marceau, 06000 Nice, France",
+            "geometry": {
+                "location": {
+                    "lat": 43.70735200000001,
+                    "lng": 7.265618000000001
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.70871717989272,
+                        "lng": 7.266953729892722
+                    },
+                    "southwest": {
+                        "lat": 43.70601752010727,
+                        "lng": 7.264254070107278
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "bbb22d39f2bc63aee5f1a8c65163f781e8f7a34e",
+            "name": "Cumin & Cannelle",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 1536,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/101829580848092063790\">A Google User</a>"
+                    ],
+                    "photo_reference": "CmRaAAAATIXgUVj0sEWcjsg1dsHgN78tzm-7UwbLp4uN7Mt05w63Az4R58vds87HLprjXdXMz_4lJMm3dSbsBbYygL_Jj94mJDPJfBb7rrLF1zN45sMWL4KvvM3J3FIoJ5GOwKrREhCngj1TEcBKw7mqBTob7qVVGhQnn6UjVL7Cq4vZ6p2FLhEXTW2E0g",
+                    "width": 2048
+                }
+            ],
+            "place_id": "ChIJQeuJ46nazRIRk4kfnE4X4ig",
+            "plus_code": {
+                "compound_code": "P748+W6 Nice, France",
+                "global_code": "8FM9P748+W6"
+            },
+            "price_level": 2,
+            "rating": 4.8,
+            "reference": "ChIJQeuJ46nazRIRk4kfnE4X4ig",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 186
+        },
+        {
+            "formatted_address": "1 Rue Molière, 06100 Nice, France",
+            "geometry": {
+                "location": {
+                    "lat": 43.712925,
+                    "lng": 7.2613751
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.71433732989272,
+                        "lng": 7.262718379892722
+                    },
+                    "southwest": {
+                        "lat": 43.71163767010727,
+                        "lng": 7.260018720107278
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "94a2efc1e38d946e5fdb77392818dacc6faf0ced",
+            "name": "La Route du Miam",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 3648,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/112510759328533321448\">Gianni Mancini</a>"
+                    ],
+                    "photo_reference": "CmRaAAAANwmZToGb_WFx06Lsn2qsAXGMacRtHlvmymBe3cFzqMeW9vgOjfWehMI7KQJtyGunoEC0kZQE7sOfVNm_AGRIySCSNUNrH77zwafTDiQ041vh0CBj9FFvFCSbLts0J8CAEhBsxHooosnhZ_s5WBYmmPMbGhTxumOLSf5DfZ-mjD9RELefUN4eHQ",
+                    "width": 2736
+                }
+            ],
+            "place_id": "ChIJs0r33gHQzRIR0dflPnn2LnQ",
+            "plus_code": {
+                "compound_code": "P776+5H Nice, France",
+                "global_code": "8FM9P776+5H"
+            },
+            "price_level": 3,
+            "rating": 4.6,
+            "reference": "ChIJs0r33gHQzRIR0dflPnn2LnQ",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 263
+        },
+        {
+            "formatted_address": "46 Boulevard Stalingrad, 06300 Nice, France",
+            "geometry": {
+                "location": {
+                    "lat": 43.6962669,
+                    "lng": 7.286702
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.69761147989272,
+                        "lng": 7.288105279892721
+                    },
+                    "southwest": {
+                        "lat": 43.69491182010727,
+                        "lng": 7.285405620107277
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "72abab22bdd684ab55bb58e85f5ea37186b59472",
+            "name": "Les Amoureux",
+            "opening_hours": {},
+            "photos": [
+                {
+                    "height": 2592,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/114844101486788205245\">Mabel Nicotra</a>"
+                    ],
+                    "photo_reference": "CmRaAAAALLcqYiBNOi3ugN8fxvm8Tf7YD1XSsAc8bGqc5HwVcjDPhfmpm7QFCgFH0-Ss24juwYg4HBIzzDAY1osd82LFVKj3j63p78V61G5jjb7Jw4CHgRvkYzeIA9_ptVDeIqcQEhD2VZM3FlzIgDMGNtH2hzu-GhQrywkEkfszC_X08ZfFcMC_1QzN-Q",
+                    "width": 4608
+                }
+            ],
+            "place_id": "ChIJ-xkf-7jazRIRJEn7j0I4bxo",
+            "plus_code": {
+                "compound_code": "M7WP+GM Nice, France",
+                "global_code": "8FM9M7WP+GM"
+            },
+            "price_level": 2,
+            "rating": 4.8,
+            "reference": "ChIJ-xkf-7jazRIRJEn7j0I4bxo",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 755
+        },
+        {
+            "formatted_address": "5 Rue Barillerie, 06300 Nice, France",
+            "geometry": {
+                "location": {
+                    "lat": 43.6958131,
+                    "lng": 7.276732200000001
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.69738982989271,
+                        "lng": 7.278068929892722
+                    },
+                    "southwest": {
+                        "lat": 43.69469017010726,
+                        "lng": 7.275369270107278
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "8173eb1146754b7546603a0b95e4ecd02c487ab2",
+            "name": "Le Panier",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 2736,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/107785614928127357077\">Georgios Voulgarakis</a>"
+                    ],
+                    "photo_reference": "CmRaAAAATCABiT6YGnVkdPOlOyvBg-Xox2eAA0n6R8mHemS2u5ylqnbyTmK8ZItaXo1ehqPlkFPQh8UjwUNhVwIJ-oVVmmrs5uMqpHnjKbma7O6bbpXzTin9lq2LhViaS7ZGgW62EhCyOjfZcC4uOnRE3TGPEe1hGhSchF5hQ2bRdqBBxQRhul2gIfWw3w",
+                    "width": 3648
+                }
+            ],
+            "place_id": "ChIJN9ov0bzazRIRzVepJsFjV6M",
+            "plus_code": {
+                "compound_code": "M7WG+8M Nice, France",
+                "global_code": "8FM9M7WG+8M"
+            },
+            "price_level": 2,
+            "rating": 4.7,
+            "reference": "ChIJN9ov0bzazRIRzVepJsFjV6M",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 392
+        },
+        {
+            "formatted_address": "38 Rue Droite, 06300 Nice, France",
+            "geometry": {
+                "location": {
+                    "lat": 43.6965078,
+                    "lng": 7.2772175
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.69786012989272,
+                        "lng": 7.27851262989272
+                    },
+                    "southwest": {
+                        "lat": 43.69516047010728,
+                        "lng": 7.275812970107276
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "2d9316a0552cc634e8e5e8f63b72716d2684fd31",
+            "name": "Chez Acchiardo",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 792,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/114247032184063224295\">Mike Hiwaymann</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAKJI3x4y2rrFqq_zwYKCCPiggdRGZQRwtjYVcjxa_KvfTlvLadDeVk5wdNfHlEc1kqrPs8yzYEI04jk4bcew9XVfat0CIucVW4rNT1jHeQY2Reg_L8532fOPGP1-reAW6EhBJKRcTf6wpKXe0gy1FysxmGhRzDgL4hRR2p1fsTVVW75r_i2kDfQ",
+                    "width": 1066
+                }
+            ],
+            "place_id": "ChIJK764wLzazRIR9fDsfSUBFb4",
+            "plus_code": {
+                "compound_code": "M7WG+JV Nice, France",
+                "global_code": "8FM9M7WG+JV"
+            },
+            "price_level": 2,
+            "rating": 4.7,
+            "reference": "ChIJK764wLzazRIR9fDsfSUBFb4",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 792
+        },
+        {
+            "formatted_address": "107 Boulevard de Cessole, 06100 Nice, France",
+            "geometry": {
+                "location": {
+                    "lat": 43.7206139,
+                    "lng": 7.251247999999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.72199207989272,
+                        "lng": 7.252709629892721
+                    },
+                    "southwest": {
+                        "lat": 43.71929242010727,
+                        "lng": 7.250009970107278
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "6f0b0fdcbc9fe38b7dc1d55ccac53a7aec9ee7f3",
+            "name": "Le Fonetic",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 2988,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/104417183923136604073\">frederic rayon</a>"
+                    ],
+                    "photo_reference": "CmRaAAAACfB99T0x42TFHfWG4gfqO2gifFUoyW89a3wYanjClkF9_x3RVpazWhWrarBozqtXarxHcuaLLRI2kCT9HloNHhuzUnuytSfL0qDfW3ApfSu08dzls5yqIN2ay_ZtHgznEhDEcOhfrR6xLu3oOwjB55l0GhQJrQjAj0NpwAs0HDNuJ4SwOCuH0w",
+                    "width": 5312
+                }
+            ],
+            "place_id": "ChIJf5aXUeTPzRIRG4_Ygofpi04",
+            "plus_code": {
+                "compound_code": "P7C2+6F Nice, France",
+                "global_code": "8FM9P7C2+6F"
+            },
+            "price_level": 2,
+            "rating": 4.7,
+            "reference": "ChIJf5aXUeTPzRIRG4_Ygofpi04",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 277
+        },
+        {
+            "formatted_address": "17 Rue Smolett, 06300 Nice, France",
+            "geometry": {
+                "location": {
+                    "lat": 43.70384420000001,
+                    "lng": 7.2835869
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.70515427989272,
+                        "lng": 7.284913329892722
+                    },
+                    "southwest": {
+                        "lat": 43.70245462010728,
+                        "lng": 7.282213670107279
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "6292693f768d850aff398908b21dce62dea4feda",
+            "name": "Le Millésime",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 3265,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/103747353171486656461\">Sté Adexo</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAHb_kEet8imvCejVwiU3pwmemlLxEPMFVoNPPVtuHeYwCXnKfuNCIWItmA6tuNSM9zgKernaxjG-SZi9iVgCe5xiwDX8oBJdvOiqoK0hBowTyq707rK3Q3BCCHU8JoKHlEhANVhjbP0RMx2g1mmBW99_yGhSX31VfqEGCUrfOnu81nWeptLuNCQ",
+                    "width": 4898
+                }
+            ],
+            "place_id": "ChIJ63PSD7fazRIRCTmR7IZtZp8",
+            "plus_code": {
+                "compound_code": "P73M+GC Nice, France",
+                "global_code": "8FM9P73M+GC"
+            },
+            "rating": 4.6,
+            "reference": "ChIJ63PSD7fazRIRCTmR7IZtZp8",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 191
+        },
+        {
+            "formatted_address": "11 Avenue du Ray, 06100 Nice, France",
+            "geometry": {
+                "location": {
+                    "lat": 43.7211471,
+                    "lng": 7.260628799999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.72252792989272,
+                        "lng": 7.262074179892722
+                    },
+                    "southwest": {
+                        "lat": 43.71982827010727,
+                        "lng": 7.259374520107278
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "c74dba7df099194e94251edbf6e592742321d7a3",
+            "name": "Le Bistronome",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 768,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/115856696022670616732\">A Google User</a>"
+                    ],
+                    "photo_reference": "CmRaAAAActFnx4c113ombJXsp_v_ZTZQp7li6f5pCdPjtwquGDYFVAVtcGWw2W08CyudX4zg2C18H1lgGXnvUPx9sh9iIsHTaW0Oefv-xvVOTSOr_hNaiViwopUvZ-5r3TerEoMAEhBPBCXKo-nDC8egTtIYFZTHGhQEYg7O-rDWV0IFabDtK9Fg0YOHSg",
+                    "width": 1024
+                }
+            ],
+            "place_id": "ChIJxa48kfnPzRIRi05AoCK396Q",
+            "plus_code": {
+                "compound_code": "P7C6+F7 Nice, France",
+                "global_code": "8FM9P7C6+F7"
+            },
+            "price_level": 2,
+            "rating": 4.7,
+            "reference": "ChIJxa48kfnPzRIRi05AoCK396Q",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 363
+        },
+        {
+            "formatted_address": "37 Prom. des Anglais, 06000 Nice, France",
+            "geometry": {
+                "location": {
+                    "lat": 43.6944349,
+                    "lng": 7.2580579
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.69570697989272,
+                        "lng": 7.25943947989272
+                    },
+                    "southwest": {
+                        "lat": 43.69300732010728,
+                        "lng": 7.256739820107276
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "d963744e45f91e3d3b42ee099e5050d4508eb287",
+            "name": "Le Chantecler",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 928,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/102868749670123211125\">Abdulaziz Alselham</a>"
+                    ],
+                    "photo_reference": "CmRaAAAA1Stadf0ILtNjPxNRd7sZJkyoF0QEEG1lWZEAjEqQEuB2PpRJHW898VNVEwgf8AtO79aN6Zs8tVuuG92UqsXI3aLI7Lgdii2-R94R2LkF3DpzOmFP1aIf4d8ewIQmXZrTEhDTy_hZAkxXOHtSPTQoCO8aGhSE8Kw6nQ8EbqUnQxZHfPrQcTtzYQ",
+                    "width": 1242
+                }
+            ],
+            "place_id": "ChIJdcqjygzQzRIRJvAyqYUV8_I",
+            "plus_code": {
+                "compound_code": "M7V5+Q6 Nice, France",
+                "global_code": "8FM9M7V5+Q6"
+            },
+            "price_level": 4,
+            "rating": 4.4,
+            "reference": "ChIJdcqjygzQzRIRJvAyqYUV8_I",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 99
+        },
+        {
+            "formatted_address": "9 Rue du Commandant Raffali, 06000 Nice, France",
+            "geometry": {
+                "location": {
+                    "lat": 43.6963369,
+                    "lng": 7.2648011
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.69787152989272,
+                        "lng": 7.266298879892721
+                    },
+                    "southwest": {
+                        "lat": 43.69517187010727,
+                        "lng": 7.263599220107277
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "178dfbf5947a1cde5c5df7b778a118d069c2ad2b",
+            "name": "La Cucina",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 4048,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/112690742159925997008\">kyle bemis</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAL2w4GguzWjdyO-LvDkpo0bHAmOSKHaBy3CWJImdRZapywVug9UW6pwtBer1_2_vVOt7yUYvlsXE8CAw4FPSYGny-yPvBtU_kVB5h_f6GJyX_u7Di1vmYW5HgkKZNMNrKEhBwKL0XptPAfgiyX6gJcYUsGhQ1dcirFfjvtD6KIrN81yQ2cRyGsw",
+                    "width": 3036
+                }
+            ],
+            "place_id": "ChIJDStdfQrQzRIRjPK7wwu-L-w",
+            "plus_code": {
+                "compound_code": "M7W7+GW Nice, France",
+                "global_code": "8FM9M7W7+GW"
+            },
+            "rating": 4.4,
+            "reference": "ChIJDStdfQrQzRIRjPK7wwu-L-w",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 94
+        },
+        {
+            "formatted_address": "24 Rue Alphonse Karr, 06000 Nice, France",
+            "geometry": {
+                "location": {
+                    "lat": 43.70031230000001,
+                    "lng": 7.2645236
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.70164762989272,
+                        "lng": 7.265806829892721
+                    },
+                    "southwest": {
+                        "lat": 43.69894797010728,
+                        "lng": 7.263107170107277
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "9634f01b9e7957938f4701d814ea8a6e85229315",
+            "name": "Le Vingt4",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 3840,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/117083612832976796023\">RESTAURANT LE VINGT4</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAL3MAbeTRCNnC8Y7bs-G0HYAQ9vC37wxEbpG82ndkOui4ETEa5E55-7BfmU1LBVK4QX7TOicrJjVGKSLaL3COVKwmvHFqLjs_e17f1CXr646quJMriznf3BFrYgfZS75VEhAxlInehE2kVIs8dtq88zuDGhRnWXRxF-DN7m_uJVSlZ2_BSm8dIQ",
+                    "width": 5760
+                }
+            ],
+            "place_id": "ChIJ4_cuzwnQzRIRkZFhzS2qjX4",
+            "plus_code": {
+                "compound_code": "P727+4R Nice, France",
+                "global_code": "8FM9P727+4R"
+            },
+            "price_level": 2,
+            "rating": 4.5,
+            "reference": "ChIJ4_cuzwnQzRIRkZFhzS2qjX4",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 221
+        },
+        {
+            "formatted_address": "14 Avenue Saint-Jean-Baptiste, 06000 Nice, France",
+            "geometry": {
+                "location": {
+                    "lat": 43.7020279,
+                    "lng": 7.2780169
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.70333832989272,
+                        "lng": 7.279467929892721
+                    },
+                    "southwest": {
+                        "lat": 43.70063867010727,
+                        "lng": 7.276768270107278
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "4002e12d7a4486e1a25162dc5b34cc1f39f2c935",
+            "name": "Maizon",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 1224,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/108610615459875379163\">Sharmen Tm</a>"
+                    ],
+                    "photo_reference": "CmRaAAAASF3smYNlP5ASZ97wwnayciJ8pbtXWfdR5q7XdfIgRFQpOfD_l-ZWvfnBcfNaky-MdMGr4-CWbSMA54RUbbL55SZbbLh8QzQErZz7EVTXKIent-J8m7PiaIajqoZ6A2wMEhABKFXMluQdMmNkq7UhhXccGhQpXYSXjkiwAKA6Avm7LMBwktBYVw",
+                    "width": 1480
+                }
+            ],
+            "place_id": "ChIJb6KimrrazRIRAGz4tSjgkxM",
+            "plus_code": {
+                "compound_code": "P72H+R6 Nice, France",
+                "global_code": "8FM9P72H+R6"
+            },
+            "price_level": 2,
+            "rating": 4.5,
+            "reference": "ChIJb6KimrrazRIRAGz4tSjgkxM",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 83
+        },
+        {
+            "formatted_address": "7 Rue Alberti, 06000 Nice, France",
+            "geometry": {
+                "location": {
+                    "lat": 43.69897030000001,
+                    "lng": 7.2721768
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.70032857989272,
+                        "lng": 7.273555729892723
+                    },
+                    "southwest": {
+                        "lat": 43.69762892010728,
+                        "lng": 7.270856070107279
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "7e01903124441b0984ee161afe5841cd7d80f2d8",
+            "name": "Le Bocal",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 2448,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/115488589180592242290\">Le Bocal</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAn-vJbmZ9gIyJijRNDIFm5YbHNbSEdyEyPmL7eG_pOe5M3Yv5c0Ed7FSjiCwcskZuZFO_45JFQ5g5dLULLHVjP8HQGM-MLDvVYB8iLE5HqK1cnumul6h0flBv98ZSdobvEhDuUhKkp6lT4g0yGZvvHBWCGhSwpAhfCDcP3m9SSYLsZGCIK8X0og",
+                    "width": 3264
+                }
+            ],
+            "place_id": "ChIJ_Upoa6TazRIRguqD57D0pTw",
+            "plus_code": {
+                "compound_code": "M7XC+HV Nice, France",
+                "global_code": "8FM9M7XC+HV"
+            },
+            "rating": 4.8,
+            "reference": "ChIJ_Upoa6TazRIRguqD57D0pTw",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 182
+        },
+        {
+            "formatted_address": "8 Rue Mascoinat, 06300 Nice, France",
+            "geometry": {
+                "location": {
+                    "lat": 43.6975658,
+                    "lng": 7.276453500000001
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.69879152989272,
+                        "lng": 7.277658779892722
+                    },
+                    "southwest": {
+                        "lat": 43.69609187010728,
+                        "lng": 7.274959120107278
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "657d657c3de30263b655d27ef5a25f8cfdc34d95",
+            "name": "The Rossettisserie",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/114282871446104328720\">Lucia Ojeda Morales</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAi-q1_NYHJph5Vlttu6PtSZo3sco-Yy0eJnsKMHxVgA0IX3xcSvM-a20Uno2fZE4cA9lADAfWRzI8UrCVlfC0ZkZ8F9TR-LewIZlCPUi71_aV-dW8Vuo5kfs4mQ7otazNEhBfNpGhLIXolIzBnafhBywaGhSiyLXDn4ofVWSzUjfmUWsmEOoknw",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJ_U6jrrzazRIRwH3yQwWMDEM",
+            "plus_code": {
+                "compound_code": "M7XG+2H Nice, France",
+                "global_code": "8FM9M7XG+2H"
+            },
+            "price_level": 2,
+            "rating": 4.5,
+            "reference": "ChIJ_U6jrrzazRIRwH3yQwWMDEM",
+            "types": [
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 467
+        },
+        {
+            "formatted_address": "1 Rue de la Loge, 06300 Nice, France",
+            "geometry": {
+                "location": {
+                    "lat": 43.6980635,
+                    "lng": 7.2768595
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.69940487989273,
+                        "lng": 7.278199879892721
+                    },
+                    "southwest": {
+                        "lat": 43.69670522010728,
+                        "lng": 7.275500220107277
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "1e985a8a4f7c312321bfaa812b6312ba172190b7",
+            "name": "KOKO GREEN Vegan & Raw food",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 740,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/101960848338524849485\">KOKO GREEN</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAySQNUZjuEwnmO436Cji9lZvoKHmXNpv7rLwE3VrApuC2fGuhzddFXlO_GvYxfUA34J9e0c-zSBBk_TEe7Kjx98RsiXG1jVw8NZJD2e-mi8RLBOCU9Ed6_jT_HNLugm4EEhCRcx6sk-NEtyxyhqUbmwRaGhTVmkrcaf2kaEB3NwpwNrs3_KXqvw",
+                    "width": 1440
+                }
+            ],
+            "place_id": "ChIJWSDEWbvazRIR5G_GWJi1WRo",
+            "plus_code": {
+                "compound_code": "M7XG+6P Nice, France",
+                "global_code": "8FM9M7XG+6P"
+            },
+            "price_level": 2,
+            "rating": 4.8,
+            "reference": "ChIJWSDEWbvazRIR5G_GWJi1WRo",
+            "types": [
+                "cafe",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "store",
+                "establishment"
+            ],
+            "user_ratings_total": 234
+        }
+    ],
+    "status": "OK"
+}
