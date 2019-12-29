@@ -16,9 +16,24 @@ def get_restaurants(town: str, api_key: str, number_of_restaurants: int) -> List
     all_infos: List[Restaurant] = [from_response(info, i) for i,info in enumerate(flattened_list)]
     return all_infos
 
-def get_same_restaurant(restaurant: Restaurant, cached_results: List[Restaurant]) -> Optional[Restaurant]:
+def get_same_restaurant(restaurant: Restaurant, cached_results: List[Restaurant], town: str, api_key: str) -> Optional[Restaurant]:
+    # See If We Already Found Restaurant
     assert(all([restaurant.get_site() == RatingSite.GOOGLE_MAPS for restaurant in cached_results]))
-    return op.get_same_restaurant(restaurant, cached_results)
+    same_restaurant: Optional[Restaurant] = op.get_same_restaurant(restaurant, cached_results)
+    if same_restaurant:
+        return same_restaurant
+    # Search With Google API
+    url: str = f"https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=restaurant {restaurant.name()} {town}&inputtype=textquery&fields=rating,user_ratings_total,name,place_id&key={api_key}"
+    response: dict = requests.get(url).json()
+    try:
+        candidate: dict = response["candidates"][0]
+        return from_response(candidate, -1)
+    except IndexError:
+        print(response)
+        return None
+
+
+
 
 
 def from_response(response: dict, rank: int) -> Restaurant:
@@ -55,7 +70,7 @@ def _get_google_maps_response(town: str, api_key: str) -> List[dict]:
 
 def _get_next_result(response: dict, api_key: str) -> dict:
     pagetoken: str = response["next_page_token"]
-    time.sleep(1.5)
+    time.sleep(2)
     next_page: dict = requests.get(f"https://maps.googleapis.com/maps/api/place/textsearch/json?pagetoken={pagetoken}&key={api_key}").json()
     return next_page
 

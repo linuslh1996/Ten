@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 from enum import IntEnum
 from typing import List
@@ -20,13 +22,12 @@ class RatingSite(IntEnum):
     GOOGLE_MAPS = 1,
     TRIP_ADVISOR = 2
 
-
+@dataclass
 class Restaurant:
+    info: RestaurantInformation
+    rating: RestaurantRating
+    site: RatingSite
 
-    def __init__(self, info: RestaurantInformation, rating: RestaurantRating, site: RatingSite):
-        self.info: RestaurantInformation = info
-        self.rating: RestaurantRating = rating
-        self.site: RatingSite = site
 
     def __str__(self) -> str:
         presentation: str = f"name: {self.name()} \n" \
@@ -58,10 +59,9 @@ class Restaurant:
         return self.site
 
 
+@dataclass
 class CombinedRestaurant:
-
-    def __init__(self, restaurant_from_all_sites: List[Restaurant]):
-        self.all_sites: List[Restaurant] = restaurant_from_all_sites
+    all_sites: List[Restaurant]
 
     def get_from_site(self, site: RatingSite) -> Restaurant:
         info_from_site: Restaurant = next(filter(lambda restaurant: restaurant.get_site() == site, self.all_sites), None)
@@ -71,20 +71,16 @@ class CombinedRestaurant:
     def has_entry_on_site(self, site: RatingSite) -> bool:
         return next(filter(lambda restaurant: restaurant.get_site() == site, self.all_sites), None) is not None
 
+    # noinspection PyUnresolvedReferences
+    def get_score(self, all_restaurants: List[CombinedRestaurant]) -> float:
+        total_score: float = 0.0
+        for site_reviews in self.all_sites:
+            # Without Needed Context
+            rating_score: float = max((site_reviews.average_rating() - 8),0) * 5
+            popularity_score: float = min(site_reviews.number_of_reviews() / 10, 10)
+            total_score += rating_score * 0.9 + popularity_score * 0.1
+        total_score = total_score / len(self.all_sites)
+        return total_score
 
-def get_score(restaurant: CombinedRestaurant, all_restaurants: List[CombinedRestaurant]) -> float:
-    total_score: float = 0.0
-    for site_reviews in restaurant.all_sites:
-        # Without Needed Context
-        rating_score: float = max((site_reviews.average_rating() - 8),0) * 5
-        popularity_score: float = min(site_reviews.number_of_reviews() / 10, 10)
-        # Context Needed
-        site_of_review: RatingSite = site_reviews.site
-        all_restaurants_from_type: List[Restaurant] = [restaurant.get_from_site(site_of_review) for restaurant in all_restaurants if restaurant.has_entry_on_site(site_of_review)]
-        best_ranked_restaurant: Restaurant = min(all_restaurants_from_type, key=lambda restaurant: restaurant.rank())
-        worst_ranked_restaurant: Restaurant = max(all_restaurants_from_type, key=lambda restaurant: restaurant.rank())
-        relative_rank: float = (site_reviews.rank() - best_ranked_restaurant.rank()) / (worst_ranked_restaurant.rank() - best_ranked_restaurant.rank()) # Number between 0 and 1, 0 is the best ranked
-        rank_score = (1 - relative_rank) * 10 # Now higher is better
-        total_score += rating_score * 0.8 + popularity_score * 0.1 + rank_score * 0.1
-    total_score = total_score / len(restaurant.all_sites)
-    return total_score
+    def get_name(self) -> str:
+        return self.get_from_site(RatingSite.GOOGLE_MAPS).name()
