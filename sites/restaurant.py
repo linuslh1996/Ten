@@ -54,7 +54,7 @@ class Restaurant:
     def url(self) -> str:
         return self.info.url
 
-    def site(self) -> RatingSite:
+    def get_site(self) -> RatingSite:
         return self.site
 
 
@@ -64,25 +64,26 @@ class CombinedRestaurant:
         self.all_sites: List[Restaurant] = restaurant_from_all_sites
 
     def get_from_site(self, site: RatingSite) -> Restaurant:
-        info_from_site: Restaurant = next(filter(lambda restaurant: restaurant.site == site, self.all_sites), None)
+        info_from_site: Restaurant = next(filter(lambda restaurant: restaurant.get_site() == site, self.all_sites), None)
         assert info_from_site is not None
         return info_from_site
 
     def has_entry_on_site(self, site: RatingSite) -> bool:
-        return next(filter(lambda restaurant: restaurant.site == site, self.all_sites), None) is not None
+        return next(filter(lambda restaurant: restaurant.get_site() == site, self.all_sites), None) is not None
 
 
 def get_score(restaurant: CombinedRestaurant, all_restaurants: List[CombinedRestaurant]) -> float:
     total_score: float = 0.0
-    for info in restaurant.all_sites:
+    for site_reviews in restaurant.all_sites:
         # Without Needed Context
-        rating_score: float = max((info.average_rating() - 8),0) * 5
-        popularity_score: float = min(info.number_of_reviews() / 10, 10)
+        rating_score: float = max((site_reviews.average_rating() - 8),0) * 5
+        popularity_score: float = min(site_reviews.number_of_reviews() / 10, 10)
         # Context Needed
-        all_restaurants_from_type: List[Restaurant] = [restaurant.get_from_site(info.site) for restaurant in all_restaurants if restaurant.has_entry_on_site(info.site)]
+        site_of_review: RatingSite = site_reviews.site
+        all_restaurants_from_type: List[Restaurant] = [restaurant.get_from_site(site_of_review) for restaurant in all_restaurants if restaurant.has_entry_on_site(site_of_review)]
         best_ranked_restaurant: Restaurant = min(all_restaurants_from_type, key=lambda restaurant: restaurant.rank())
         worst_ranked_restaurant: Restaurant = max(all_restaurants_from_type, key=lambda restaurant: restaurant.rank())
-        relative_rank: float = (info.rank() - best_ranked_restaurant.rank()) / (worst_ranked_restaurant.rank() - best_ranked_restaurant.rank()) # Number between 0 and 1, 0 is the best ranked
+        relative_rank: float = (site_reviews.rank() - best_ranked_restaurant.rank()) / (worst_ranked_restaurant.rank() - best_ranked_restaurant.rank()) # Number between 0 and 1, 0 is the best ranked
         rank_score = (1 - relative_rank) * 10 # Now higher is better
         total_score += rating_score * 0.8 + popularity_score * 0.1 + rank_score * 0.1
     total_score = total_score / len(restaurant.all_sites)

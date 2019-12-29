@@ -1,20 +1,24 @@
 import json
 from pathlib import Path
-from typing import List
+from typing import List, Optional
 
 import requests
 import time
 
-from sites.operations import flatten_list
+import sites.operations as op
 from sites.restaurant import Restaurant, RestaurantInformation, RestaurantRating, RatingSite
 
 
 def get_restaurants(town: str, api_key: str, number_of_restaurants: int) -> List[Restaurant]:
     responses: List[dict] = _get_google_maps_response(town, api_key)
     list_of_restaurants: List[Restaurant] = [response["results"] for response in responses]
-    flattened_list = flatten_list(list_of_restaurants)
+    flattened_list = op.flatten_list(list_of_restaurants)
     all_infos: List[Restaurant] = [from_response(info, i) for i,info in enumerate(flattened_list)]
     return all_infos
+
+def get_same_restaurant(restaurant: Restaurant, cached_results: List[Restaurant]) -> Optional[Restaurant]:
+    assert(all([restaurant.get_site() == RatingSite.GOOGLE_MAPS for restaurant in cached_results]))
+    return op.get_same_restaurant(restaurant, cached_results)
 
 
 def from_response(response: dict, rank: int) -> Restaurant:

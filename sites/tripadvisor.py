@@ -2,12 +2,12 @@ import json
 import re
 from concurrent.futures.thread import ThreadPoolExecutor
 from pathlib import Path
-from typing import List
+from typing import List, Optional
 
 import requests
 from bs4 import Tag, BeautifulSoup, ResultSet
+import sites.operations as op
 
-from sites.operations import flatten_list
 from sites.restaurant import Restaurant, RestaurantRating, RestaurantInformation, RatingSite
 
 
@@ -18,13 +18,19 @@ def get_restaurants(town: str, api_key: str, number_of_restaurants: int) -> List
     arguments: List = [_get_url_for_page(tripadvisor_url, min_rank) for min_rank in range(0,number_of_restaurants, 30)]
     with ThreadPoolExecutor(max_workers=10) as pool:
         top_restaurants: List[Restaurant] = pool.map(_get_restaurants_on_page, arguments)
-    top_restaurants = flatten_list(top_restaurants)
+    top_restaurants = op.flatten_list(top_restaurants)
     return top_restaurants
+
+
+def get_same_restaurant(restaurant: Restaurant, cached_results: List[Restaurant]) -> Optional[Restaurant]:
+    restaurants_are_tripadvisor = [restaurant.get_site() == RatingSite.TRIP_ADVISOR for restaurant in cached_results]
+    assert(all(restaurants_are_tripadvisor))
+    return op.get_same_restaurant(restaurant, cached_results)
 
 
 def from_tag(restaurant_tag: Tag) -> Restaurant:
     name: str = _get_name(restaurant_tag)
-    link: str = _get_link(restaurant_tag)  # it is without tripadvisor in front of it
+    link: str = _get_link(restaurant_tag)
     rating: float = _get_rating(restaurant_tag)
     number_of_reviews: int = _get_number_of_reviews(restaurant_tag)
     rank: int = _get_rank(restaurant_tag)
