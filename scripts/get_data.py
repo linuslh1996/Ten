@@ -7,8 +7,8 @@ from typing import List, Optional
 
 from sites import tripadvisor as ta
 from sites import google_maps as gm
-from sites.restaurant import Restaurant, CombinedRestaurant
-
+from sites import selector as sel
+from sites.restaurant import Restaurant, CombinedRestaurant, RatingSite
 
 
 def get_combined_restaurant(restaurant: Restaurant, optional_restaurant: Optional[Restaurant]) -> CombinedRestaurant:
@@ -51,10 +51,15 @@ combined_restaurants = [restaurant for restaurant in combined_restaurants if len
 combined_restaurants = sorted(combined_restaurants, key=lambda restaurant: restaurant.get_score(combined_restaurants), reverse=True)
 combined_restaurants = removed_duplicates(combined_restaurants)
 
+combined_restaurant: CombinedRestaurant
+for combined_restaurant in combined_restaurants[:10]:
+    score: float = combined_restaurant.get_score(combined_restaurants)
+    reviews: List[str] = gm.get_reviews(combined_restaurant.get_from_site(RatingSite.GOOGLE_MAPS), api_key)
+    best_review: str = sel.choose_best_review(reviews)
+    print(f"name: {combined_restaurant.get_name()} size: {len(combined_restaurant.all_sites)}, score: {score}")
+    print(best_review)
 
-for restaurant in combined_restaurants[:30]:
-    score: float = restaurant.get_score(combined_restaurants)
-    print(f"name: {restaurant.all_sites[0].name()} size: {len(restaurant.all_sites)}, score: {score}")
+
 
 
 

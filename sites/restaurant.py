@@ -53,7 +53,7 @@ class Restaurant:
         return self.info.name
 
     def url(self) -> str:
-        return self.info.url
+        return self.info.link
 
     def get_site(self) -> RatingSite:
         return self.site

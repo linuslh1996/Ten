@@ -33,6 +33,16 @@ def get_same_restaurant(restaurant: Restaurant, cached_results: List[Restaurant]
         return None
 
 
+def get_reviews(restaurant: Restaurant, api_key: str) -> List[str]:
+    id: str = restaurant.url().split(":")[-1]
+    url: str = f"https://maps.googleapis.com/maps/api/place/details/json?place_id={id}&fields=review&key={api_key}"
+    response: dict = requests.get(url).json()
+    time.sleep(1)
+    reviews: List[str] = [review["text"] for review in response["result"]["reviews"]]
+    return reviews
+
+
+
 
 
 
