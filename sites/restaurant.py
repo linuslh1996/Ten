@@ -4,6 +4,8 @@ from dataclasses import dataclass
 from enum import IntEnum
 from typing import List
 
+from sites.rating_sites import SiteType
+
 
 @dataclass
 class RestaurantInformation:
@@ -18,15 +20,11 @@ class RestaurantRating:
     rank: int
 
 
-class RatingSite(IntEnum):
-    GOOGLE_MAPS = 1,
-    TRIP_ADVISOR = 2
-
 @dataclass
 class Restaurant:
     info: RestaurantInformation
     rating: RestaurantRating
-    site: RatingSite
+    site: SiteType
 
 
     def __str__(self) -> str:
@@ -55,7 +53,7 @@ class Restaurant:
     def url(self) -> str:
         return self.info.link
 
-    def get_site(self) -> RatingSite:
+    def get_site(self) -> SiteType:
         return self.site
 
 
@@ -63,12 +61,12 @@ class Restaurant:
 class CombinedRestaurant:
     all_sites: List[Restaurant]
 
-    def get_from_site(self, site: RatingSite) -> Restaurant:
+    def get_from_site(self, site: SiteType) -> Restaurant:
         info_from_site: Restaurant = next(filter(lambda restaurant: restaurant.get_site() == site, self.all_sites), None)
         assert info_from_site is not None
         return info_from_site
 
-    def has_entry_on_site(self, site: RatingSite) -> bool:
+    def has_entry_on_site(self, site: SiteType) -> bool:
         return next(filter(lambda restaurant: restaurant.get_site() == site, self.all_sites), None) is not None
 
     # noinspection PyUnresolvedReferences
@@ -83,4 +81,4 @@ class CombinedRestaurant:
         return total_score
 
     def get_name(self) -> str:
-        return self.get_from_site(RatingSite.GOOGLE_MAPS).name()
+        return self.get_from_site(SiteType.GOOGLE_MAPS).name()
