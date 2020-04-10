@@ -5,6 +5,8 @@ import time
 from concurrent.futures.thread import ThreadPoolExecutor
 from typing import List, Optional, Callable
 
+from starlette.middleware.cors import CORSMiddleware
+
 from sites.rating_sites import GoogleMaps, TripAdvisor, RatingSite
 from sites.restaurant import Restaurant, CombinedRestaurant, SiteType
 import sites.utils as utils
@@ -12,6 +14,18 @@ from fastapi import FastAPI
 import uvicorn
 
 app = FastAPI()
+
+origins = [
+    "http://localhost:3000",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 api_key: str = sys.argv[1]
 
 # API Calls
@@ -40,7 +54,7 @@ def load_town_results(town: str):
     duplicates_removed: List[List[Restaurant]] = removed_duplicates(only_with_full_info)
     sorted_by_score = sorted(duplicates_removed,
                              key=lambda restaurant_sites: get_score(restaurant_sites, duplicates_removed), reverse=True)
-    as_combined_restaurants: List[CombinedRestaurant] = [load_combined_restaurant(restaurant_sites, sorted_by_score, google_maps)
+    as_combined_restaurants: List[CombinedRestaurant] = [load_combined_restaurant(restaurant_sites, duplicates_removed, google_maps)
                                                          for restaurant_sites in sorted_by_score[:10]]
     return as_combined_restaurants
 
