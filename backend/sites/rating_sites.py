@@ -51,9 +51,10 @@ class GoogleMaps(RatingSite):
         same_restaurant: Optional[Restaurant] = op.get_same_restaurant(restaurant, cached_results)
         if same_restaurant:
             return same_restaurant
+        search_string = f"{restaurant.name} {town}" if "restaurant" in restaurant.name.lower() else f"restaurant {restaurant.name} {town}"
         # Search With Google API
-        url: str = f"https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=restaurant {restaurant.name} " \
-                   f"{town}&inputtype=textquery&fields=rating,user_ratings_total,name,place_id&key={self._api_key}"
+        url: str = f"https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input={search_string}" \
+                   f"&inputtype=textquery&fields=rating,user_ratings_total,name,place_id&key={self._api_key}"
         response: dict = requests.get(url).json()
         try:
             candidate: dict = response["candidates"][0]
@@ -128,7 +129,7 @@ class TripAdvisor(RatingSite):
         arguments: List = [self._get_url_for_ith_page(tripadvisor_url, min_rank) for min_rank in
                            range(0, number_of_restaurants, 30)]
         with ThreadPoolExecutor(max_workers=10) as pool:
-            top_restaurants: List[List[Restaurant]] = [self._get_restaurants_on_page(argument) for argument in arguments]
+            top_restaurants: List[List[Restaurant]] = list(pool.map(self._get_restaurants_on_page, arguments))
         top_restaurants: List[Restaurant] = op.flatten_list(top_restaurants)
         return top_restaurants
 

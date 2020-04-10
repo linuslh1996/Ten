@@ -6,13 +6,19 @@ from textblob import TextBlob
 
 
 def get_same_restaurant(restaurant: Restaurant, cached_results: List[Restaurant]) -> Optional[Restaurant]:
-    name: str = restaurant.name.lower()
-    names: List[str] = [restaurant.name.lower() for restaurant in cached_results]
+    name: str = get_formatted_name(restaurant.name)
+    names: List[str] = [get_formatted_name(restaurant.name) for restaurant in cached_results]
+
     closest_matches: List[str] = difflib.get_close_matches(name, names, n=1, cutoff=0.75)
     if len(closest_matches) == 0:
         return None
-    most_similar_restaurant = next(filter(lambda cur_restaurant: cur_restaurant.name.lower() == closest_matches[0], cached_results))
+    most_similar_restaurant = next(filter(lambda cur_restaurant: get_formatted_name(cur_restaurant.name) == closest_matches[0], cached_results), None)
     return most_similar_restaurant
+
+def get_formatted_name(restaurant_name: str) -> str:
+    to_lower: str = restaurant_name.lower()
+    without_restaurant: str = to_lower.replace("restaurant", "")
+    return without_restaurant
 
 
 def flatten_list(multidimensional_list: List) -> List:

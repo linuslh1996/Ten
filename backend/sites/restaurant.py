@@ -3,6 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from enum import Enum
 from typing import List
+import math
 
 from dataclasses_json import dataclass_json
 
@@ -32,6 +33,13 @@ class Restaurant:
         self.number_of_reviews = number_of_reviews
         self.rating = rating
         self.site = site
+
+    def get_score(self, other_restaurants: List[Restaurant]) -> float:
+        max_number_of_reviews: float = max([restaurant.number_of_reviews for restaurant in other_restaurants])
+        popularity_score: float = math.log(self.number_of_reviews, 2) / math.log(max_number_of_reviews, 2) * 10
+        rating_score: float = (self.rating - 7) * 10 / 3
+        return 0.4 * popularity_score + 0.6 * rating_score
+
 
 
 
