@@ -8,6 +8,8 @@ import re
 import requests
 import time
 import logging
+from base64 import b64encode
+
 
 from bs4 import BeautifulSoup, ResultSet
 
@@ -73,6 +75,16 @@ class GoogleMaps(RatingSite):
         response: dict = requests.get(url).json()
         reviews: List[str] = [review["text"] for review in response["result"]["reviews"]]
         return reviews
+
+    def get_images(self, restaurant: Restaurant) -> List[str]:
+        id: str = restaurant.link.split(":")[-1]
+        url: str = f"https://maps.googleapis.com/maps/api/place/details/json?place_id={id}&fields=photos&key={self._api_key}"
+        photo_references: List[str] = [photo["photo_reference"] for photo in requests.get(url).json()["result"]["photos"]]
+        get_photo_url: str = f"https://maps.googleapis.com/maps/api/place/photo?maxheight=1500&photoreference={photo_references[0]}&key={self._api_key}"
+        result = requests.get(get_photo_url)
+        first_image: str = result.content
+        base_64_encoded: str = b64encode(first_image)
+        return [base_64_encoded]
 
     # Private Methods
 
@@ -191,7 +203,7 @@ class TripAdvisor(RatingSite):
     # Constructing From Json
 
     def _from_dict(self, restaurant: Dict) -> Restaurant:
-        page_url: str = restaurant["detailPageUrl"]
+        page_url: str = f'https://www.tripadvisor.com{restaurant["detailPageUrl"]}'
         name: str = restaurant["name"]
         average_rating: float = restaurant["averageRating"] * 2
         number_of_reviews = restaurant["userReviewCount"]

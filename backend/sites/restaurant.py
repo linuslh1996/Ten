@@ -50,6 +50,8 @@ class CombinedRestaurant:
     all_sites: List[Restaurant]
     review: str
     score: float
+    images: List[str]
+
 
 
 

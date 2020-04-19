@@ -18,4 +18,5 @@ export interface Restaurant {
     review: string;
     score: number;
     all_sites: Array<SiteInfo>;
+    images: Array<string>
 }

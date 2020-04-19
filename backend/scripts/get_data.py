@@ -1,9 +1,11 @@
 from __future__ import annotations
 
+import json
 import sys
 import time
 from concurrent.futures.thread import ThreadPoolExecutor
-from typing import List, Optional, Callable
+from pathlib import Path
+from typing import List, Optional, Callable, Dict
 
 from starlette.middleware.cors import CORSMiddleware
 
@@ -28,10 +30,17 @@ app.add_middleware(
 
 api_key: str = sys.argv[1]
 
+
 # API Calls
 
 @app.get("/restaurants")
 def load_town_results(town: str):
+
+    if town.lower() == "potsdam deutschland":
+        json_file: Path = Path("result.json")
+        result: Dict = json.load(json_file.open())
+        return result
+
     # Init
     google_maps: GoogleMaps = GoogleMaps(api_key)
     trip_advisor: TripAdvisor = TripAdvisor(api_key)
@@ -40,6 +49,7 @@ def load_town_results(town: str):
     with ThreadPoolExecutor(max_workers=2) as executor:
         get_restaurants: Callable = lambda rating_site: rating_site.get_restaurants(town, 200)
         restaurant_results: List[List[Restaurant]] = list(executor.map(get_restaurants, sites))
+    print("Got Results")
     # Combine Info From The Different Sites
     all_restaurants: List[List[Restaurant]] = []
     for site_result in restaurant_results:
@@ -48,6 +58,7 @@ def load_town_results(town: str):
         completed_infos: List[List[Restaurant]] = [combine_restaurant_info(restaurant, restaurant_results, sites, town)
                                                    for restaurant in relevant_restaurants]
         all_restaurants += completed_infos
+    print("Combined Restaurants")
     # Filter
     only_with_full_info: List[List[Restaurant]] = [restaurant_sites for restaurant_sites in all_restaurants if
                                                    len(restaurant_sites) == 2]
@@ -60,12 +71,15 @@ def load_town_results(town: str):
 
 # Processing Methods For Restaurant Combination
 
-def load_combined_restaurant(restaurant_sites: List[Restaurant], all_restaurants: List[List[Restaurant]], google_maps: GoogleMaps):
+def load_combined_restaurant(restaurant_sites: List[Restaurant], all_restaurants: List[List[Restaurant]], google_maps: GoogleMaps) -> CombinedRestaurant:
     score: float = get_score(restaurant_sites, all_restaurants)
-    reviews: List[str] = google_maps.get_reviews(get_from_site(restaurant_sites, SiteType.GOOGLE_MAPS))
+    google_maps_restaurant: Restaurant = get_from_site(restaurant_sites, SiteType.GOOGLE_MAPS)
+    reviews: List[str] = google_maps.get_reviews(google_maps_restaurant)
+    time.sleep(1)
+    images: List[str] = google_maps.get_images(google_maps_restaurant)
     best_review: str = utils.choose_best_review(reviews)
     name: str = get_name(restaurant_sites)
-    combined_restaurant: CombinedRestaurant = CombinedRestaurant(name, restaurant_sites, best_review, score)
+    combined_restaurant: CombinedRestaurant = CombinedRestaurant(name, restaurant_sites, best_review, score, images)
     # Google Maps Handles not so many requests per second
     time.sleep(1)
     return combined_restaurant
