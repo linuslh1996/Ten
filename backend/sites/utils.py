@@ -1,11 +1,11 @@
 from typing import List, Optional
 
 import difflib
-from sites.restaurant import Restaurant
+from sites.restaurant import RestaurantResult
 from textblob import TextBlob
 
 
-def get_same_restaurant(restaurant: Restaurant, cached_results: List[Restaurant]) -> Optional[Restaurant]:
+def get_same_restaurant(restaurant: RestaurantResult, cached_results: List[RestaurantResult]) -> Optional[RestaurantResult]:
     name: str = get_formatted_name(restaurant.name)
     names: List[str] = [get_formatted_name(restaurant.name) for restaurant in cached_results]
 
