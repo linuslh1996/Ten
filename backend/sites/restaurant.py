@@ -77,7 +77,8 @@ class TripAdvisorResult(Base, RestaurantResult):
 class CombinedRestaurant(Base):
     __tablename__ = "restaurants"
 
-    stadt = Column(String)
+    town = Column(String)
+    country = Column(String)
     trip_advisor_link = Column(String, primary_key=True)
     google_maps_link = Column(String, primary_key=True)
 
@@ -86,10 +87,14 @@ class CombinedRestaurant(Base):
 
 
 def get_popularity_and_quality_weighted(restaurant: RestaurantResult, other_restaurants: List[RestaurantResult]) -> float:
-    max_number_of_reviews: float = max([restaurant.number_of_reviews for restaurant in other_restaurants])
-    popularity_score: float = math.log(restaurant.number_of_reviews, 2) / math.log(max_number_of_reviews, 2) * 10
-    rating_score: float = (restaurant.rating - 7) * 10 / 3
-    return math.sqrt(0.4 * popularity_score + 0.6 * rating_score)
+    try:
+        max_number_of_reviews: float = max([restaurant.number_of_reviews for restaurant in other_restaurants])
+        popularity_score: float = math.log(restaurant.number_of_reviews, 2) / math.log(max_number_of_reviews, 2) * 10
+        rating_score: float = (restaurant.rating - 7) * 10 / 3
+        score = math.sqrt(0.4 * popularity_score + 0.6 * rating_score)
+    except ValueError:
+        score = 0
+    return score
 
 def get_table_metadata() -> DeclarativeMeta:
     return Base

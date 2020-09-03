@@ -12,7 +12,10 @@ from sites.database import PostgresDatabase
 from sites.rating_sites import GoogleMaps, TripAdvisor, RatingSite
 from sites.restaurant import RestaurantResult, CombinedRestaurant, SiteType, GoogleMapsResult, TripAdvisorResult, \
     get_table_metadata
-from sites.sql import get_sql
+import logging
+from pandas import DataFrame, read_csv
+
+from sites.utils import timeout
 
 
 @dataclass
@@ -23,14 +26,15 @@ class Result:
 
 # API Calls
 
-def load_town_results(town: str) -> List[Result]:
+def load_town_results(town: str, country: str) -> List[Result]:
     # Init
+    search_string: str = town + " " + country
     google_maps: GoogleMaps = GoogleMaps(API_KEY)
     trip_advisor: TripAdvisor = TripAdvisor(API_KEY)
     sites: List[RatingSite] = [google_maps, trip_advisor]
     # Query Restaurants
     with ThreadPoolExecutor(max_workers=2) as executor:
-        get_restaurants: Callable = lambda rating_site: rating_site.get_restaurants(town, 200)
+        get_restaurants: Callable = lambda rating_site: rating_site.get_restaurants(search_string, 200)
         restaurant_results: List[List[RestaurantResult]] = list(executor.map(get_restaurants, sites))
     print("Got Results")
     # Combine Info From The Different Sites
@@ -38,7 +42,7 @@ def load_town_results(town: str) -> List[Result]:
     for site_result in restaurant_results:
         sorted_by_score = sorted(site_result, key=lambda restaurant: restaurant.get_score(site_result), reverse=True)
         relevant_restaurants: List[RestaurantResult] = sorted_by_score[:60]
-        completed_infos: List[List[RestaurantResult]] = [combine_restaurant_info(restaurant, restaurant_results, sites, town)
+        completed_infos: List[List[RestaurantResult]] = [combine_restaurant_info(restaurant, restaurant_results, sites, search_string)
                                                          for restaurant in relevant_restaurants]
         all_restaurants += completed_infos
     print("Combined Restaurants")
@@ -50,12 +54,14 @@ def load_town_results(town: str) -> List[Result]:
                              key=lambda restaurant_sites: get_score(restaurant_sites, duplicates_removed), reverse=True)
     results: List[Result] = []
     # Create Result
-    for restaurant_sites in tqdm(sorted_by_combined_score[:2]):
+    for i, restaurant_sites in enumerate(tqdm(sorted_by_combined_score)):
         google_maps_restaurant, trip_advisor_restaurant = get_typed_restaurants(restaurant_sites)
-        google_maps_completed_with_photos: GoogleMapsResult = google_maps.complete_restaurant_info(google_maps_restaurant)
-        combined_restaurant: CombinedRestaurant = CombinedRestaurant(stadt=town, google_maps_link=google_maps_restaurant.link,
+        number_of_restaurants_to_load_more_detailed_info_to: int = 25
+        if i < number_of_restaurants_to_load_more_detailed_info_to:
+            google_maps_restaurant = google_maps.complete_restaurant_info(google_maps_restaurant)
+        combined_restaurant: CombinedRestaurant = CombinedRestaurant(town=town, country=country, google_maps_link=google_maps_restaurant.link,
                                                                      trip_advisor_link=trip_advisor_restaurant.link)
-        results.append(Result(google_maps_completed_with_photos, trip_advisor_restaurant, combined_restaurant))
+        results.append(Result(google_maps_restaurant, trip_advisor_restaurant, combined_restaurant))
     return results
 
 # Processing Methods For Restaurant Combination
@@ -104,6 +110,12 @@ def get_score(restaurant_sites: List[RestaurantResult], all_restaurants: List[Li
 def get_name(restaurant_sites: List[RestaurantResult]) -> str:
     return get_from_site(restaurant_sites, SiteType.GOOGLE_MAPS).name
 
+def _change_shape(results: List[Result]) -> Tuple[List[GoogleMapsResult], List[TripAdvisorResult], List[CombinedRestaurant]]:
+    google_maps_result: List[GoogleMapsResult] = [result.google_maps_restaurant for result in results]
+    trip_advisor_result: List[TripAdvisorResult] = [result.trip_advisor_restaurant for result in results]
+    combined: List[CombinedRestaurant] = [result.combined for result in results]
+    return google_maps_result, trip_advisor_result, combined
+
 
 if __name__ == "__main__":
     API_KEY: str = os.environ["API_KEY"]
@@ -112,10 +124,20 @@ if __name__ == "__main__":
     meta_information = get_table_metadata()
     postgres_db = PostgresDatabase(DATABASE_URL)
     postgres_db.initialize_tables(DATABASE_URL, meta_information)
-    # Crawl Results
-    results = load_town_results("Berlin Deutschland")
-    #google_results = [result.google_maps_restaurant for result in results]
+    # Crawl Data For German Towns
+    german_towns: List[str] = list(read_csv("data/towns_germany.csv")["name"]) # The towns are already sorted by population
 
+    for i, town in enumerate(german_towns[25:200]):
+        print(f"processing town {i}: {town}")
+        try:
+            with timeout(seconds=300):
+                results = load_town_results(town, "Deutschland")
+                google_maps_results, trip_advisor_results, restaurants = _change_shape(results)
+                postgres_db.convert_to_db_entry(google_maps_results, "google_maps").upsert()
+                postgres_db.convert_to_db_entry(trip_advisor_results, "trip_advisor").upsert()
+                postgres_db.convert_to_db_entry(restaurants, "restaurants").upsert()
+        except Exception:
+            logging.exception(f"Error for town {town}. Continuing with next town")
 
 
 
