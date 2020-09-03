@@ -9,14 +9,29 @@ export interface SiteInfo {
     link: string;
     number_of_reviews: bigint;
     rating: number;
-    site: RatingSite
 }
 
 
 export interface Restaurant {
-    name: string;
-    review: string;
-    score: number;
-    all_sites: Array<SiteInfo>;
-    images: Array<string>
+    google_maps_info: GoogleMapsInfo,
+    trip_advisor_info: TripAdvisorInfo
+}
+
+export interface GoogleMapsInfo {
+    name: string
+    link: string
+    number_of_reviews: bigint
+    rating: number
+    formatted_address: string
+    location_lang: number
+    location_lat: number
+    photos: Array<string>
+    reviews: Array<string>
+}
+
+export interface TripAdvisorInfo {
+    name: string
+    link: string
+    number_of_reviews: bigint
+    rating: number
 }

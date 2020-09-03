@@ -11,7 +11,7 @@ const useStyles = makeStyles({
 
 
 export function RestaurantDetail(props: {siteInfo: SiteInfo}) {
-    const name: string = props.siteInfo.site.replace("_", " ");
+    const name: string = "Google Maps";
     const styles = useStyles();
 
     return <div>

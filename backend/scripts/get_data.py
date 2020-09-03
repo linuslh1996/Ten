@@ -54,7 +54,7 @@ def load_town_results(town: str, country: str) -> List[Result]:
                              key=lambda restaurant_sites: get_score(restaurant_sites, duplicates_removed), reverse=True)
     results: List[Result] = []
     # Create Result
-    for i, restaurant_sites in enumerate(tqdm(sorted_by_combined_score)):
+    for i, restaurant_sites in enumerate(tqdm(sorted_by_combined_score[:1])):
         google_maps_restaurant, trip_advisor_restaurant = get_typed_restaurants(restaurant_sites)
         number_of_restaurants_to_load_more_detailed_info_to: int = 25
         if i < number_of_restaurants_to_load_more_detailed_info_to:
@@ -134,8 +134,8 @@ if __name__ == "__main__":
                 results = load_town_results(town, "Deutschland")
                 google_maps_results, trip_advisor_results, restaurants = _change_shape(results)
                 postgres_db.convert_to_db_entry(google_maps_results, "google_maps").upsert()
-                postgres_db.convert_to_db_entry(trip_advisor_results, "trip_advisor").upsert()
-                postgres_db.convert_to_db_entry(restaurants, "restaurants").upsert()
+                #postgres_db.convert_to_db_entry(trip_advisor_results, "trip_advisor").upsert()
+                #postgres_db.convert_to_db_entry(restaurants, "restaurants").upsert()
         except Exception:
             logging.exception(f"Error for town {town}. Continuing with next town")
 

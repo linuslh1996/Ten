@@ -76,15 +76,19 @@ class GoogleMaps(RatingSite):
         id: str = restaurant.link.split(":")[-1]
         url: str = f"https://maps.googleapis.com/maps/api/place/details/json?place_id={id}&fields=review,photos&key={self._api_key}"
         response: dict = requests.get(url).json()
-        # Process Data
-        reviews: List[str] = [review["text"] for review in response["result"]["reviews"]]
-        photo_references: List[str] = [photo["photo_reference"] for photo in requests.get(url).json()["result"]["photos"]]
-        images: List[str] = [self._get_image(reference) for reference in photo_references[:3]]
-        # Create New Object
-        completed: GoogleMapsResult = copy(restaurant)
-        completed.photos = images
-        completed.reviews = reviews
-        return completed
+        try:
+            # Process Data
+            reviews: List[str] = [review["text"] for review in response["result"]["reviews"]]
+            photo_references: List[str] = [photo["photo_reference"] for photo in requests.get(url).json()["result"]["photos"]]
+            images: List[str] = [self._get_image(reference) for reference in photo_references[:3]]
+            # Create New Object
+            completed: GoogleMapsResult = copy(restaurant)
+            completed.photos = images
+            completed.reviews = reviews
+            return completed
+        except Exception:
+            logging.exception("Could not complete info for restaurant. Returning uncompleted info")
+            return restaurant
 
 
     # Private Methods

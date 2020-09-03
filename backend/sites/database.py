@@ -1,4 +1,5 @@
 import inspect
+import logging
 from typing import List, Dict, Any, Tuple, TypeVar, Type
 
 import psycopg2
@@ -12,8 +13,10 @@ from sqlalchemy.ext.declarative import DeclarativeMeta
 
 
 # Helper
+from sqlalchemy.orm.attributes import InstrumentedAttribute
 
 T = TypeVar('T')
+S = TypeVar('S')
 
 class DbEntry:
 
@@ -33,7 +36,7 @@ class DbResult:
     def __init__(self, data: List[Dict]):
         self.data = data
 
-    def convert_rows_to(self, type: Type[T]) -> List[T]:
+    def convert_rows_to(self, type: Type[T], accept_error=False) -> List[T]:
         # Get Info On Type
         empty_instance: T = _instanciate_new_instance(type)
         instance_variables: List[str] = _get_variables_of_type(empty_instance)
@@ -42,11 +45,34 @@ class DbResult:
         for entry in self.data:
             new_instance: T = _instanciate_new_instance(type)
             for variable in instance_variables:
-                if not variable in entry.keys():
-                    raise Exception(f"Could not find a value for {variable}")
-                setattr(new_instance, variable, entry[variable])
+                alias = self.get_column_alias(type.__tablename__, variable)
+                if variable in entry.keys():
+                    value = entry[variable]
+                # When the columns have duplicates (in joins), they need to be aliased in order for the mapping to work.
+                # We check if that is case. The alias has a specified scheme: "table_column". Aka a column
+                # "name" in table "movies" would be aliased as "movies_name".
+                elif alias in entry.keys():
+                    value = entry[alias]
+                # We can not find a fitting column
+                else:
+                    if not accept_error:
+                        raise Exception(f"Could not find a value for {variable}. Please check if your result contains duplicate"
+                                        f"column names. If yes, you need to alias the columns with 'table_column', for instance"
+                                        f"'movies_name'")
+                    logging.error(f"could not find value for column {variable}. We fill it with None")
+                    value = None
+                setattr(new_instance, variable, value)
             result.append(new_instance)
         return result
+
+    def convert_to_two_types(self, first_type: Type[T], second_type: Type[S], accept_error=False) -> List[Tuple[T, S]]:
+        result_wrong_shape = [self.convert_rows_to(type, accept_error) for type in [first_type, second_type]]
+        # noinspection PyTypeChecker
+        return list(zip(*result_wrong_shape))
+
+    @staticmethod
+    def get_column_alias(table_name: str, column: str) -> str:
+        return f"{table_name}_{column}"
 
 
 # Database
@@ -133,6 +159,11 @@ class PostgresDatabase:
         return [result["attname"] for result in results]
 
 
+def get_column_names(table: DeclarativeMeta):
+    # noinspection PyTypeChecker
+    instance = _instanciate_new_instance(table)
+    return _get_variables_of_type(instance)
+
 def _instanciate_new_instance(type: Type[T]) -> T:
     constructor_arguments: List = list(inspect.signature(type.__init__).parameters.keys())
     arguments: Dict = {key: None for key in constructor_arguments if not key == "self"}
@@ -143,11 +174,13 @@ def _instanciate_new_instance(type: Type[T]) -> T:
     return empty_instance
 
 def _get_variables_of_type(instance: T) -> List[str]:
-    is_sql_alchemy_class: bool = hasattr(instance, "__tablename__")
-    if is_sql_alchemy_class:
+    if _is_sql_alchemy_class(instance):
         variables = list(vars(instance.__class__).items())
     else:
         variables = list(vars(instance).items())
     without_protected = [key for key, value in variables if not key.startswith("_") and not isinstance(value, MetaData)
                          and not callable(value)]
     return without_protected
+
+def _is_sql_alchemy_class(instance) -> bool:
+    return hasattr(instance, "__tablename__")

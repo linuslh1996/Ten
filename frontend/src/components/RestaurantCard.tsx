@@ -10,6 +10,7 @@ import Collapse from "@material-ui/core/Collapse";
 import {RestaurantDetail} from "./RestaurantDetail";
 import * as blobUtil from "blob-util";
 import CardMedia from "@material-ui/core/CardMedia";
+import ImageViewer from "./ImageViewer";
 
 const useStyles = makeStyles({
     root: {
@@ -23,19 +24,12 @@ const useStyles = makeStyles({
     },
 });
 
-function getImageURL(base64Encoded: string): string {
-    const testBlob = blobUtil.base64StringToBlob(base64Encoded,"image/png");
-    const url: string = URL.createObjectURL(testBlob);
-    return url
-}
-
 
 
 
 export function RestaurantCard(props: {restaurant: Restaurant}): JSX.Element {
     const classes = useStyles();
     const [expanded, setExpanded] = useState(false);
-    const imageURL: string = getImageURL(props.restaurant.images[0]);
     const height: number = 500;
     const handleExpandClick = () => {
         setExpanded(!expanded);
@@ -45,19 +39,17 @@ export function RestaurantCard(props: {restaurant: Restaurant}): JSX.Element {
 
     return   <Card variant="outlined">
 
-        <CardMedia>
-            <img src={imageURL} height={height}/>
-        </CardMedia>
+        <ImageViewer images={props.restaurant.google_maps_info.photos} />
 
         <CardContent>
             <Typography className={classes.title} color="textPrimary" gutterBottom>
-                {props.restaurant.name}
+                {props.restaurant.google_maps_info.name}
             </Typography>
             <Typography className={classes.pos} color="textSecondary">
-                {props.restaurant.score}
+                {props.restaurant.google_maps_info.rating}
             </Typography>
             <Typography variant="body2" component="p" color="textSecondary">
-                "{props.restaurant.review}"
+                "{props.restaurant.google_maps_info.reviews[0]}"
             </Typography>
         </CardContent>
 
@@ -67,9 +59,7 @@ export function RestaurantCard(props: {restaurant: Restaurant}): JSX.Element {
 
         <Collapse in={expanded}>
             <CardContent>
-                {props.restaurant.all_sites.map(site => {
-                    return <RestaurantDetail siteInfo={site}/>
-                })}
+                    <RestaurantDetail siteInfo={props.restaurant.google_maps_info}/>
             </CardContent>
         </Collapse>
     </Card>
