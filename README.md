@@ -13,7 +13,7 @@ The implementation is very prototyp-y. In the backend, I use the Google Places A
 npm start
 ````
 
-## Future Work
+## Future Possibilities
 
 Right now, the calculation of a fresh result for a town needs around 2 minutes. The download of the photos seems to be the bottleneck and probably can be speed up by requesting a smaller sized image from Google. However, I don't see a way to stay at under 30 seconds for one request, since crawling data and using external APIs (with limitations on usage) just takes time. So while it would be really cool to, for _any_ user-input town, respond swiftly, I don't think that this is feasible.
 
