@@ -35,13 +35,15 @@ class Result:
 
 @app.get("/restaurants")
 def get_restaurants(town: str):
-    print(town)
+    # Get Info For All Restaurants Without Expensive Photo Loading Operation
     sql_to_get_names: Composed = sql.get_restaurants_without_photos(town)
     results = POSTGRES_DB.get(sql_to_get_names).convert_to_two_types(GoogleMapsResult, TripAdvisorResult, accept_error=True)
     google_maps_results = [result[0] for result in results]
     trip_advisor_results = [result[1] for result in results]
     assert (len(results)) != 0, "Could not load results"
+    # Sort Restaurants To Get The 10 Best Restaurants
     sorted_by_score = sorted(results, key=lambda result: result[0].get_score(google_maps_results) + result[1].get_score(trip_advisor_results), reverse=True)
+    # Complete Restaurant Data By Loading Photos Into It
     sql_to_get_all_info: Composed = sql.get_all_restaurant_info(tuple([result[0].link for result in sorted_by_score[:10]]))
     results = POSTGRES_DB.get(sql_to_get_all_info).convert_to_two_types(GoogleMapsResult, TripAdvisorResult)
     return [{"google_maps_info": result[0], "trip_advisor_info":result[1]} for result in results]
