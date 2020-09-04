@@ -1,7 +1,7 @@
 from typing import List, Optional
 
 import difflib
-from sites.restaurant import RestaurantResult
+from ratings.restaurant import RestaurantResult
 from textblob import TextBlob
 
 

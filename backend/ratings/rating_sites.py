@@ -14,8 +14,8 @@ from base64 import b64encode
 
 from bs4 import BeautifulSoup, ResultSet
 
-import sites.utils as op
-from sites.restaurant import RestaurantResult, SiteType, GoogleMapsResult, TripAdvisorResult
+import ratings.utils as op
+from ratings.restaurant import RestaurantResult, SiteType, GoogleMapsResult, TripAdvisorResult
 
 
 class RatingSite:

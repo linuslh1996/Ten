@@ -8,14 +8,14 @@ from psycopg2.sql import SQL
 from tqdm import tqdm
 import os
 
-from sites.database import PostgresDatabase
-from sites.rating_sites import GoogleMaps, TripAdvisor, RatingSite
-from sites.restaurant import RestaurantResult, CombinedRestaurant, SiteType, GoogleMapsResult, TripAdvisorResult, \
+from ratings.database import PostgresDatabase
+from ratings.rating_sites import GoogleMaps, TripAdvisor, RatingSite
+from ratings.restaurant import RestaurantResult, CombinedRestaurant, SiteType, GoogleMapsResult, TripAdvisorResult, \
     get_table_metadata
 import logging
 from pandas import DataFrame, read_csv
 
-from sites.utils import timeout
+from ratings.utils import timeout
 
 
 @dataclass

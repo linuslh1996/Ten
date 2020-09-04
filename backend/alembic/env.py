@@ -22,7 +22,7 @@ fileConfig(config.config_file_name)
 # Change Pythonpath so that alembic finds modules
 sys.path = ['', '..'] + sys.path[1:]
 
-from sites.restaurant import get_table_metadata
+from ratings.restaurant import get_table_metadata
 target_metadata = get_table_metadata().metadata
 
 # other values from the config, defined by the needs of env.py,

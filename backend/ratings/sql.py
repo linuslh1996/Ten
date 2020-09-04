@@ -3,8 +3,8 @@ from typing import Tuple, Dict, List
 from psycopg2.sql import SQL, Literal, Composed, Identifier
 from sqlalchemy.ext.declarative import DeclarativeMeta
 
-from sites.restaurant import *
-from sites.database import get_column_names, DbResult
+from ratings.restaurant import *
+from ratings.database import get_column_names, DbResult
 
 
 def get_aliased_select(table: DeclarativeMeta, table_shortcut: str=None, columns: List[str] = None) -> SQL:

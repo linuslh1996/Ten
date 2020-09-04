@@ -8,9 +8,9 @@ from starlette.middleware.cors import CORSMiddleware
 
 import os
 
-from sites import sql
-from sites.database import PostgresDatabase, get_column_names
-from sites.restaurant import *
+from ratings import sql
+from ratings.database import PostgresDatabase, get_column_names
+from ratings.restaurant import *
 
 app = FastAPI()
 DATABASE_URL: str = os.environ["DATABASE_URL"]
