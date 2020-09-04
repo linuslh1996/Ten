@@ -70,6 +70,11 @@ class DbResult:
         # noinspection PyTypeChecker
         return list(zip(*result_wrong_shape))
 
+    def convert_to_primitive_type(self, primitive_type: Type[T]) -> List[T]:
+        assert all([len(row) == 1 for row in self.data])
+        assert all([isinstance(list(row.values())[0], primitive_type) for row in self.data])
+        return [list(row.values())[0] for row in self.data]
+
     @staticmethod
     def get_column_alias(table_name: str, column: str) -> str:
         return f"{table_name}_{column}"

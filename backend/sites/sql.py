@@ -38,3 +38,7 @@ def get_all_restaurant_info(google_maps_links: Tuple) -> Composed:
               "INNER JOIN trip_advisor ON restaurants.trip_advisor_link  = trip_advisor.link "
               "WHERE restaurants.google_maps_link IN {google_maps_links}")
     return sql.format(fields_to_select=fields_to_select, google_maps_links=Literal(google_maps_links))
+
+def get_all_available_towns() -> SQL:
+    sql = SQL("SELECT DISTINCT town FROM restaurants")
+    return sql

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useLayoutEffect, useRef} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
@@ -23,44 +23,9 @@ const useStyles = makeStyles((theme) => ({
         // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
         transform: 'translateZ(0)',
     },
-    tile: {
-        width: "100%",
-        overflow: "hidden"
-    },
-    title: {
-        color: theme.palette.primary.light,
-    },
-    titleBar: {
-        background:
-            'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
-    },
-    imgStyle: {
-        height: "100%"
-    },
-    fullHeight: {
-        width: "100%"
-    },
-    fullWidth: {
-        height: "100%",
-        width: "auto"
-    }
+
 }));
 
-function getGridListCols(width: Breakpoint) {
-    if (isWidthUp('xl', width)) {
-        return 4;
-    }
-
-    if (isWidthUp('lg', width)) {
-        return 2.1;
-    }
-
-    if (isWidthUp('md', width)) {
-        return 2.1;
-    }
-
-    return 0.9;
-}
 
 /**
  * The example data is structured as follows:
@@ -86,17 +51,6 @@ function getImageURL(base64Encoded: string): string {
     return url
 }
 
-function useWidth() {
-    const theme = useTheme();
-    const keys = [...theme.breakpoints.keys].reverse();
-    return (
-        keys.reduce((output, key) => {
-            // eslint-disable-next-line react-hooks/rules-of-hooks
-            const matches = useMediaQuery(theme.breakpoints.up(key));
-            return !output && matches ? key : output;
-        }, null) || 'xs'
-    );
-}
 
 
 export default function ImageViewer(props: {images: Array<string>}) {
@@ -104,12 +58,13 @@ export default function ImageViewer(props: {images: Array<string>}) {
 
     const classes = useStyles();
 
+
     return (
         <div className={classes.root}>
-            <GridList className={classes.gridList} cellHeight={300} cols={getGridListCols(useWidth())}>
+            <GridList className={classes.gridList} cellHeight={350} cols={2.5}>
                 {imagesWithUrl.map((image) => (
-                    <GridListTile key={image} >
-                            <img  src={image} />
+                   <GridListTile key={image} >
+                            <img src={image} />
                     </GridListTile>
                 ))}
             </GridList>

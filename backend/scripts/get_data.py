@@ -134,8 +134,8 @@ if __name__ == "__main__":
                 results = load_town_results(town, "Deutschland")
                 google_maps_results, trip_advisor_results, restaurants = _change_shape(results)
                 postgres_db.convert_to_db_entry(google_maps_results, "google_maps").upsert()
-                #postgres_db.convert_to_db_entry(trip_advisor_results, "trip_advisor").upsert()
-                #postgres_db.convert_to_db_entry(restaurants, "restaurants").upsert()
+                postgres_db.convert_to_db_entry(trip_advisor_results, "trip_advisor").upsert()
+                postgres_db.convert_to_db_entry(restaurants, "restaurants").upsert()
         except Exception:
             logging.exception(f"Error for town {town}. Continuing with next town")
 
