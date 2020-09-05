@@ -8,7 +8,7 @@ Finding nice restaurants in a town can be a bit of a pain. We have a lot of data
 
 ## Implementation
 
-The implementation is very prototyp-y. In the backend, I use the Google Places API and crawl Trip Advisor for data. Then I combine the data from both providers and rank the restaurant based on a simple score system (a combination between review score and number of reviews). This then gets returned to the frontend. Since the query can be quite time consuming (You can make around one Place Detail request every two seconds), I have written a script that calculates the result for the large German towns and stores it in a database. See the `get_data.py` script. To start the backend, start the `start_api.py` script. The frontend can be started with
+The implementation is very prototyp-y. In the backend, I use the Google Places API and crawl Trip Advisor for data. Then I combine the data from both providers and rank the restauranst based on a simple score system (a combination between review score and number of reviews). The 10 highest rated restaurants then get returned to the frontend. Since the query can be quite time consuming (You can make around one Place Detail request every two seconds), I have written a script that calculates the result for the large German towns and stores it in a database. See the `get_data.py` script. To start the backend, start the `start_api.py` script. The frontend can be started with
 ````
 npm start
 ````
