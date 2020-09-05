@@ -13,7 +13,6 @@ from sqlalchemy.ext.declarative import DeclarativeMeta
 
 
 # Helper
-from sqlalchemy.orm.attributes import InstrumentedAttribute
 
 T = TypeVar('T')
 S = TypeVar('S')
@@ -45,14 +44,13 @@ class DbResult:
         for entry in self.data:
             new_instance: T = _instanciate_new_instance(type)
             for variable in instance_variables:
-                alias = self.get_column_alias(type.__tablename__, variable)
                 if variable in entry.keys():
                     value = entry[variable]
                 # When the columns have duplicates (in joins), they need to be aliased in order for the mapping to work.
                 # We check if that is case. The alias has a specified scheme: "table_column". Aka a column
                 # "name" in table "movies" would be aliased as "movies_name".
-                elif alias in entry.keys():
-                    value = entry[alias]
+                elif self.get_column_alias(type.__tablename__, variable) in entry.keys():
+                    value = entry[self.get_column_alias(type.__tablename__, variable)]
                 # We can not find a fitting column
                 else:
                     if not accept_error:

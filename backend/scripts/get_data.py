@@ -131,7 +131,7 @@ if __name__ == "__main__":
         print(f"processing town {i}: {town}")
         try:
             with timeout(seconds=300):
-                results = load_town_results(town, "Deutschland")
+                results: List[Result] = load_town_results(town, "Deutschland")
                 google_maps_results, trip_advisor_results, restaurants = _change_shape(results)
                 postgres_db.convert_to_db_entry(google_maps_results, "google_maps").upsert()
                 postgres_db.convert_to_db_entry(trip_advisor_results, "trip_advisor").upsert()
